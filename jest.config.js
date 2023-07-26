@@ -11,7 +11,7 @@ module.exports = {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest'
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
+    '^@/(.*)$': '<rootDir>/src/$1'
   },
   collectCoverage: true,
   coverageDirectory: 'report/coverage',
@@ -20,7 +20,7 @@ module.exports = {
     [
       './node_modules/jest-html-reporter',
       {
-        pageTitle: 'delegate.js 单测报告',
+        pageTitle: 'icons.js 单测报告',
         outputPath: 'report/unit-test/demo.html',
         includeFailureMsg: true
       }
