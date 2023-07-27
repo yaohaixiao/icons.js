@@ -13,10 +13,20 @@ const PLUGIN_CONFIG = [
 export default [
   // For full functions module
   {
-    input: './src/icons.js',
+    input: './icons.js',
     output: {
       name: 'icons',
       file: './icons.min.js',
+      format: 'umd',
+      sourcemap: true
+    },
+    plugins: PLUGIN_CONFIG
+  },
+  {
+    input: './icon.js',
+    output: {
+      name: 'icon',
+      file: './icon.min.js',
       format: 'umd',
       sourcemap: true
     },

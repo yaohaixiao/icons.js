@@ -1,20 +1,19 @@
 import paint from './paint'
-import create from './create'
+import createElement from './createElement'
 import appendTo from './appendTo'
 import getSymbols from './getSymbols'
 import add from './add'
 import remove from './remove'
+import clear from './clear'
 
 const icons = {
   paint(symbols = []) {
     paint(symbols)
-
     return this
   },
 
-  create(name, options) {
-    create(name, options)
-
+  createElement(name, options) {
+    createElement(name, options)
     return this
   },
 
@@ -23,9 +22,12 @@ const icons = {
     return this
   },
 
+  symbols(name, iconSet = 'icon') {
+    return getSymbols(name, iconSet)
+  },
+
   add(symbol) {
     add(symbol)
-
     return this
   },
 
@@ -34,8 +36,9 @@ const icons = {
     return this
   },
 
-  symbols(name, iconSet = 'icon') {
-    return getSymbols(name, iconSet)
+  clear() {
+    clear()
+    return this
   }
 }
 

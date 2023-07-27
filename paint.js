@@ -9,7 +9,7 @@ import getSymbols from './getSymbols'
  */
 const paint = (symbol = '') => {
   const $body = document.body
-  let $icons = document.querySelector('#icons')
+  let $icons = document.querySelector('#ijs-icons')
   let symbols = []
 
   add(symbol)
@@ -20,7 +20,7 @@ const paint = (symbol = '') => {
   } else {
     $icons = document.createElement('div')
     $icons.innerHTML =
-      `<svg id="icons" aria-hidden="true" style="position:absolute;display:none;width:0;height:0;overflow:hidden;">` +
+      `<svg id="ijs-icons" aria-hidden="true" style="position:absolute;display:none;width:0;height:0;overflow:hidden;">` +
       `${symbols.join('')}` +
       `</svg>`
     $body.insertBefore($icons.firstChild, $body.firstChild)

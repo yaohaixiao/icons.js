@@ -1,6 +1,6 @@
 import isElement from './utils/isElement'
 import isString from './utils/isString'
-import create from './create'
+import createElement from './createElement'
 
 /**
  *
@@ -10,7 +10,6 @@ import create from './create'
  * @param {Object} [options]
  */
 const appendTo = (el, name, options) => {
-  const $icon = create(name, options)
   let $el
 
   if (isElement(el)) {
@@ -21,11 +20,11 @@ const appendTo = (el, name, options) => {
     }
   }
 
-  if (!$el) {
+  if (!$el || !name) {
     return false
   }
 
-  $el.appendChild($icon)
+  $el.appendChild(createElement(name, options))
 }
 
 export default appendTo
