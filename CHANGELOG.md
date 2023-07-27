@@ -1,8 +1,6 @@
 # 1.0.0 (2023-07-27)
 
 
-## Features
-
 icons.js - 专门用来显示 svg 图标的 JavaScript 小工具。
 
 
