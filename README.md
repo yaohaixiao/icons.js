@@ -1,6 +1,6 @@
 # icons.js
 [![npm version](https://img.shields.io/npm/v/@yaohaixiao/icons.js)](https://www.npmjs.com/package/@yaohaixiao/icons.js)
-[![Github file size](https://img.shields.io/github/size/yaohaixiao/icons.js/icons.min.js.svg)](https://github.com/yaohaixiao/icons.js/blob/master/icons.min.js)
+![Gzip size](http://img.badgesize.io/https://cdn.jsdelivr.net/gh/yaohaixiao/icons.js/icons.min.js?compression=gzip&label=gzip%20size)
 [![prettier code style](https://img.shields.io/badge/code_style-prettier-07b759.svg)](https://prettier.io)
 [![Coverage](https://codecov.io/gh/yaohaixiao/icons.js/branch/master/graph/badge.svg)](https://codecov.io/gh/yaohaixiao/icons.js)
 [![npm downloads](https://img.shields.io/npm/dm/@yaohaixiao/icons.js)](https://npmcharts.com/compare/@yaohaixiao/icons.js?minimal=true)
