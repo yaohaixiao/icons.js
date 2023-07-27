@@ -2,7 +2,7 @@
 [![npm version](https://img.shields.io/npm/v/@yaohaixiao/icons.js)](https://www.npmjs.com/package/@yaohaixiao/icons.js)
 ![Gzip size](http://img.badgesize.io/https://cdn.jsdelivr.net/gh/yaohaixiao/icons.js/icons.min.js?compression=gzip&label=gzip%20size)
 [![prettier code style](https://img.shields.io/badge/code_style-prettier-07b759.svg)](https://prettier.io)
-[![Coverage](https://codecov.io/gh/yaohaixiao/icons.js/branch/master/graph/badge.svg)](https://codecov.io/gh/yaohaixiao/icons.js)
+[![Coverage](https://codecov.io/gh/yaohaixiao/icons.js/branch/main/graph/badge.svg)](https://codecov.io/gh/yaohaixiao/icons.js)
 [![npm downloads](https://img.shields.io/npm/dm/@yaohaixiao/icons.js)](https://npmcharts.com/compare/@yaohaixiao/icons.js?minimal=true)
 [![MIT License](https://img.shields.io/github/license/yaohaixiao/icons.js.svg)](https://github.com/yaohaixiao/icons.js/blob/master/LICENSE)
 
@@ -12,7 +12,7 @@ icons.js - 专门用来显示 svg 图标的 JavaScript 小工具。
 
 ## 项目初衷
 
-最近在开发中 outline.js 时，需要用到 ES6 模块的图标 svg 图标创建工具，加上一直开发的 VUE 项目也需要用到 svg 图标，所以整理了以下开发中常用的方法，写出了 icons.js 这个小工具。希望对其他有需要实用 svg 图标的朋友也带来一些便捷。
+最近在开发中 outline.js 时，需要用到 ES6 模块的 svg 图标创建工具，加上一直开发的 VUE 项目也需要用到 svg 图标，所以整理了一下开发中常用的方法，写出了 icons.js 这个小工具。希望对其他也需要使用 svg 图标的朋友也带来一些便捷。
 
 
 
@@ -20,11 +20,11 @@ icons.js - 专门用来显示 svg 图标的 JavaScript 小工具。
 
 - 原生 JavaScript 编写，无需任何依赖；
 - 支持 UMD 规范；
-- 支持 E6 模块，提供功能独立的 ES6 模块；
-- 提供多个小工具： 
-  * **icons.js** - 提供了一系列操作绘制图标库和显示 svg 图标的方法；
-  * **Icon.vue** - Icon.vue 是基于 VUE 2.6 的一个独立组件，用于在 VUE 项目中显示 svg 图标；
-  * **icon.js** - icon.js 是一个 ES6 独立功能函数，用于创建 svg 图标 DOM 元素的；
+- 提供功能独立的 ES6 模块代码；
+- 提供多个实用小工具：
+  * **icons.js**：提供了一系列操作绘制图标库，创建图标 DOM 元素和显示 svg 图标的方法；
+  * **Icon.vue**：Icon.vue 是基于 VUE 2.6 的独立组件，用于在 VUE 项目中显示 svg 图标；
+  * **icon.js**：icon.js 是 ES6 模块的独立功能函数，用于创建 svg 图标 DOM 元素的；
 - 配置灵活，调用简单；
 - 体积小；
 
@@ -94,11 +94,11 @@ export default DEFAULTS
 
 ## API Documentation
 
-虽然项目名称是 icons.js，但 icons.js 提供多种实用用具：
+虽然项目名称是 icons.js，但 icons.js 提供多个实用工具：
 
-* **icons.js** - 提供了一系列操作绘制图标库和显示 svg 图标的方法；
-* **Icon.vue** - Icon.vue 是基于 VUE 2.6 的一个独立组件，用于在 VUE 项目中显示 svg 图标；
-* **icon.js** - icon.js 是一个 ES6 独立功能函数，用于创建 svg 图标 DOM 元素的；
+* **icons.js**：提供了一系列操作绘制图标库，创建图标 DOM 元素和显示 svg 图标的方法；
+* **Icon.vue**：Icon.vue 是基于 VUE 2.6 的独立组件，用于在 VUE 项目中显示 svg 图标；
+* **icon.js**：icon.js 是 ES6 模块的独立功能函数，用于创建 svg 图标 DOM 元素的；
 
 
 
@@ -128,7 +128,7 @@ Default: ``
 import icons from '@yaohaixiao/icons.js/icons'
 
 // 不添加参数，绘制默认图标
-icons.paint()  
+icons.paint()
 ```
 
 ###### 追加绘制单个新图标
@@ -142,7 +142,7 @@ const NPM =
   '<symbol id="rdc-icon-npm" viewBox="0 0 2500 2500"><path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff"/></symbol>'
 
 // 绘制默认图标
-icons.paint()  
+icons.paint()
 
 // 参数为 string 类型，追加单个图标
 // 追加绘制 NPM 图标
@@ -169,7 +169,7 @@ icons.paint()
 paint(ICONS)
 ```
 
-#### createElement(name[, options]) 
+#### createElement(name[, options])
 
 createElement() 方法用于创建显示 svg 图标 DOM 元素。
 
@@ -219,7 +219,7 @@ Type: `HTMLElement`
 <ul class="toolbar">
   <li class="toolbar__item" id="up"></li>
   <li class="toolbar__item" id="down"></li>
-  <li class="toolbar__item" id="tips"></li>  
+  <li class="toolbar__item" id="tips"></li>
 </ul>
 ```
 
@@ -292,7 +292,7 @@ Default: `{}`
 <ul class="toolbar">
   <li class="toolbar__item" id="up"></li>
   <li class="toolbar__item" id="down"></li>
-  <li class="toolbar__item" id="tips"></li>  
+  <li class="toolbar__item" id="tips"></li>
 </ul>
 ```
 
@@ -560,7 +560,7 @@ icon() 方法的调用与 Icon.vue 组件类似，调用语法如下：
 <ul class="toolbar">
   <li class="toolbar__item" id="up"></li>
   <li class="toolbar__item" id="down"></li>
-  <li class="toolbar__item" id="tips"></li>  
+  <li class="toolbar__item" id="tips"></li>
 </ul>
 ```
 
