@@ -4,7 +4,7 @@
 [![prettier code style](https://img.shields.io/badge/code_style-prettier-07b759.svg)](https://prettier.io)
 [![Coverage](https://codecov.io/gh/yaohaixiao/icons.js/branch/main/graph/badge.svg)](https://codecov.io/gh/yaohaixiao/icons.js)
 [![npm downloads](https://img.shields.io/npm/dm/@yaohaixiao/icons.js)](https://npmcharts.com/compare/@yaohaixiao/icons.js?minimal=true)
-[![MIT License](https://img.shields.io/github/license/yaohaixiao/icons.js.svg)](https://github.com/yaohaixiao/icons.js/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/github/license/yaohaixiao/icons.js.svg)](https://github.com/yaohaixiao/icons.js/blob/main/LICENSE)
 
 icons.js - 专门用来显示 svg 图标的 JavaScript 小工具。
 
