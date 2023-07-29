@@ -28,9 +28,10 @@ const createElement = (name, options = {}) => {
     return null
   }
 
-  binds = iconSet
-    ? `xlink:href="#${iconSet}-icon-${name}"`
-    : `xlink:href="#icon-${name}"`
+  binds =
+    iconSet && iconSet !== 'icon'
+      ? `xlink:href="#${iconSet}-icon-${name}"`
+      : `xlink:href="#icon-${name}"`
   svg =
     `<svg aria-hidden="true" class="ijs-icon__svg" style="${cssRules}">` +
     `<use ${binds}></use>` +

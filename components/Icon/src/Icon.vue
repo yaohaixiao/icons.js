@@ -1,11 +1,11 @@
 <template>
   <i
     v-if="name"
-    class="icons-icon">
+    class="ijs-icon">
     <svg
       aria-hidden="true"
       :style="cssRules"
-      class="icons-icon__svg">
+      class="ijs-icon__svg">
       <use v-bind="binds" />
     </svg>
   </i>
@@ -21,8 +21,8 @@
 import isArray from '../../../utils/isArray'
 
 export default {
-  name: 'Icon',
-  componentName: 'components',
+  name: 'IjsIcon',
+  componentName: 'IjsIcon',
   props: {
     name: {
       type: String,
@@ -45,7 +45,10 @@ export default {
     binds() {
       const iconSet = this.iconSet
       const name = this.name
-      const xlink = iconSet ? `#${iconSet}-icon-${name}` : `#icon-${name}`
+      const xlink =
+        iconSet && iconSet !== 'icon'
+          ? `#${iconSet}-icon-${name}`
+          : `#icon-${name}`
 
       return {
         'xlink:href': xlink
