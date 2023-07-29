@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/yaohaixiao/icons.js/compare/1.0.0...1.0.1) (2023-07-29)
+
+
+### Bug Fixes
+
+* 修复设置 iconSet = 'icon' 时的逻辑处理问题 ([ffd85b1](https://github.com/yaohaixiao/icons.js/commit/ffd85b171d16ba872cc9fdfe5ebfcae5c0eae811))
+
+
+
 # 1.0.0 (2023-07-27)
 
 
