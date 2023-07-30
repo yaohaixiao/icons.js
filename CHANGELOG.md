@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/yaohaixiao/icons.js/compare/1.0.1...1.0.2) (2023-07-30)
+
+
+### Bug Fixes
+
+* 修复Icon组件的引用路径问题 ([3ebeae1](https://github.com/yaohaixiao/icons.js/commit/3ebeae18f4591892465430b4c4ffd82a93de86fe))
+
+
+
 ## [1.0.1](https://github.com/yaohaixiao/icons.js/compare/1.0.0...1.0.1) (2023-07-29)
 
 
