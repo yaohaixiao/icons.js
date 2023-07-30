@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/yaohaixiao/icons.js/compare/1.0.3...1.0.4) (2023-07-30)
+
+
+### Bug Fixes
+
+* 修复 ijs-icon 样式设置细节问题，去掉 overflow: hidden ([7bc7a27](https://github.com/yaohaixiao/icons.js/commit/7bc7a27e9b4e5fa9f7e409385aec1dc0311cc290))
+
+
+
 ## [1.0.3](https://github.com/yaohaixiao/icons.js/compare/1.0.2...1.0.3) (2023-07-30)
 
 
