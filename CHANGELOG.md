@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/yaohaixiao/icons.js/compare/1.0.2...1.0.3) (2023-07-30)
+
+
+### Bug Fixes
+
+* 修复图标显示的UI细节缺陷 ([f92ae2d](https://github.com/yaohaixiao/icons.js/commit/f92ae2de27cef33da3e3a4fe72801c854d18684e))
+
+
+
 ## [1.0.2](https://github.com/yaohaixiao/icons.js/compare/1.0.1...1.0.2) (2023-07-30)
 
 

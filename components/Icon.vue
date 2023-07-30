@@ -1,8 +1,7 @@
 <template>
   <i
     v-if="name"
-    class="ijs-icon"
-    :style="cssRules">
+    class="ijs-icon">
     <svg
       aria-hidden="true"
       :style="cssRules"
