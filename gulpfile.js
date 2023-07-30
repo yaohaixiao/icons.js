@@ -26,7 +26,7 @@ const lint = () => {
 /* ==================== 编译代码的 gulp 任务 ==================== */
 const buildStyles = () => {
   return gulp
-    .src(['./components/Icon/src/icon.less'], {
+    .src(['./components/icon.less'], {
       allowEmpty: true
     })
     .pipe(sourcemaps.init())

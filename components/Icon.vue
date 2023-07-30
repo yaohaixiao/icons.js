@@ -13,12 +13,12 @@
 
 <script>
 /**
- * components.vue - SVG 图标显示组件
+ * Icon.vue - SVG 图标显示组件
  * =============================================================
  * Created By: Yaohaixiao
  * Update: 2024.07.27
  */
-import isArray from '../../../utils/isArray'
+import isArray from '../utils/isArray'
 
 export default {
   name: 'IjsIcon',
