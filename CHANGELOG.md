@@ -1,3 +1,12 @@
+## [1.0.5](https://github.com/yaohaixiao/icons.js/compare/1.0.4...1.0.5) (2023-07-31)
+
+
+### Bug Fixes
+
+* 修复图标样式显示细节，去掉 margin-top: -0.5em ([b302f0d](https://github.com/yaohaixiao/icons.js/commit/b302f0da5f75e22cd1c838a7afd8dc970d885288))
+
+
+
 ## [1.0.4](https://github.com/yaohaixiao/icons.js/compare/1.0.3...1.0.4) (2023-07-30)
 
 
