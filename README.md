@@ -91,6 +91,9 @@ export default DEFAULTS
 * up - 图标名称；
 
 
+注意：若需要使用更多图标，请使用 [icons.toolkit.vue](https://github.com/yaohaixiao/icons.toolkit.vue) 自行创建适合自己的图标集。
+
+
 
 ## API Documentation
 
