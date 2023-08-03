@@ -34,7 +34,7 @@ describe('paint() 方法：', () => {
     symbols = getSymbols()
 
     expect($icons.querySelectorAll('symbol').length).toEqual(symbols.length)
-    expect(count()).toEqual(9)
+    expect(count()).toEqual(49)
   })
 
   it(`paint(${ICONS}), 返回：true`, () => {
@@ -49,7 +49,7 @@ describe('paint() 方法：', () => {
     $tips = getSymbols('tips', 'dev')
 
     expect($icons.querySelectorAll('symbol').length).toEqual(symbols.length)
-    expect(count()).toEqual(11)
+    expect(count()).toEqual(51)
     expect($tips).toEqual(ICONS[0])
   })
 })

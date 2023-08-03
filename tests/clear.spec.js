@@ -14,11 +14,11 @@ describe('remove() 方法：', () => {
 
   it(`没有调用 paint() 方法，直接调用 clear(), 只会清理数据，并返回：undefined`, () => {
     add(NPM)
-    expect(count()).toEqual(9)
+    expect(count()).toEqual(49)
     expect(getSymbol('npm', 'rdc')).toEqual(NPM)
 
     expect(clear()).toBe(undefined)
-    expect(count()).toEqual(8)
+    expect(count()).toEqual(48)
     expect(getSymbol('up')).toEqual(getSymbols()[0])
   })
 
@@ -26,14 +26,14 @@ describe('remove() 方法：', () => {
     let $icons
 
     paint(NPM)
-    expect(count()).toEqual(9)
+    expect(count()).toEqual(49)
     expect(getSymbol('npm', 'rdc')).toEqual(NPM)
 
     clear()
 
     $icons = document.querySelector('#icons')
     expect($icons).toBe(null)
-    expect(count()).toEqual(8)
+    expect(count()).toEqual(48)
     expect(getSymbol('up')).toEqual(getSymbols()[0])
   })
 })

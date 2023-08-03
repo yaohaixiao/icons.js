@@ -16,9 +16,10 @@ const getSymbol = (name, iconSet = 'icon') => {
     const fullName = names[1]
     const sets = patternSet.exec(fullName)
     const setName = sets[1]
-    const contains = fullName.indexOf(name) > -1
+    const iconName =
+      iconSet === 'icon' ? `${iconSet}-${name}` : `${iconSet}-icon-${name}`
 
-    return setName === iconSet && contains
+    return setName === iconSet && fullName === iconName
   })
 }
 
