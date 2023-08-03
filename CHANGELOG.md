@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/yaohaixiao/icons.js/compare/1.0.5...1.1.0) (2023-08-03)
+
+
+### Features
+
+* 丰富 icons.js 默认的图标集；修复 getSymbol() 方法中判断图标名称的问题，将 indexOf 改成了 ===，并且需要比较全名 ([6eb6700](https://github.com/yaohaixiao/icons.js/commit/6eb6700901bc8dc8cc9ceb5ecc6799cb4c05c427))
+
+
+
 ## [1.0.5](https://github.com/yaohaixiao/icons.js/compare/1.0.4...1.0.5) (2023-07-31)
 
 
