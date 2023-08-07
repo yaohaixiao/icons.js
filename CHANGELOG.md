@@ -1,3 +1,13 @@
+# [1.2.0](https://github.com/yaohaixiao/icons.js/compare/1.1.0...1.2.0) (2023-08-07)
+
+
+### Features
+
+* 调整 createElement() 方法，可以直接传递 SVG 字符串，不用依赖 icons 内置的图标 ([5bd28ba](https://github.com/yaohaixiao/icons.js/commit/5bd28ba9f1ca721b8914d6016f6ee6c34939873f))
+* 调整 Icon.vue 组件的逻辑，支持直接绘制 svg ([1a4a143](https://github.com/yaohaixiao/icons.js/commit/1a4a1438bb1b250631e22bf1b2320bbd355b59bd))
+
+
+
 # [1.1.0](https://github.com/yaohaixiao/icons.js/compare/1.0.5...1.1.0) (2023-08-03)
 
 
