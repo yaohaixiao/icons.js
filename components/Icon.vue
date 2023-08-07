@@ -1,8 +1,10 @@
 <template>
   <i
     v-if="name"
-    class="ijs-icon">
+    class="ijs-icon"
+    ref="icon">
     <svg
+      v-if="!isSVG(name)"
       aria-hidden="true"
       :style="cssRules"
       class="ijs-icon__svg">
@@ -18,7 +20,9 @@
  * Created By: Yaohaixiao
  * Update: 2024.07.27
  */
+import isSVG from './utils/isSVG'
 import isArray from '../utils/isArray'
+import appendTo from './appendTo'
 
 export default {
   name: 'IjsIcon',
@@ -72,6 +76,27 @@ export default {
 
       return color ? defaultRules + `color:${color}` : defaultRules
     }
+  },
+  mounted() {
+    const $icon = this.$el
+    const name = this.name
+    const size = this.size
+    const color = this.color
+    const options = {
+      size,
+      color
+    }
+
+    if (!isSVG(name)) {
+      return false
+    }
+
+    this.$nextTick(() => {
+      appendTo($icon, name, options)
+    })
+  },
+  methods: {
+    isSVG
   }
 }
 </script>
