@@ -1,5 +1,6 @@
 import isArray from './utils/isArray'
 import isString from './utils/isString'
+import isSVG from './utils/isSVG'
 
 /**
  * 创建 SVG 图标 DOM 元素
@@ -23,22 +24,37 @@ const createElement = (name, options = {}) => {
   const $icon = document.createElement('i')
   let binds = ''
   let svg = ''
+  let $svg
 
   if (!isString(name)) {
     return null
   }
 
-  binds =
-    iconSet && iconSet !== 'icon'
-      ? `xlink:href="#${iconSet}-icon-${name}"`
-      : `xlink:href="#icon-${name}"`
-  svg =
-    `<svg aria-hidden="true" class="ijs-icon__svg" style="${cssRules}">` +
-    `<use ${binds}></use>` +
-    `</svg>`
+  if (isSVG(name)) {
+    svg = name
+  } else {
+    binds =
+      iconSet && iconSet !== 'icon'
+        ? `xlink:href="#${iconSet}-icon-${name}"`
+        : `xlink:href="#icon-${name}"`
+    svg =
+      `<svg aria-hidden="true" class="ijs-icon__svg" style="${cssRules}">` +
+      `<use ${binds}></use>` +
+      `</svg>`
+  }
 
   $icon.className = 'ijs-icon'
   $icon.innerHTML = svg
+
+  if (isSVG(name)) {
+    $svg = $icon.querySelector('svg')
+    $svg.setAttribute('aria-hidden', 'true')
+    $svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    $svg.setAttribute('class', 'ijs-icon__svg')
+    $svg.setAttribute('width', '200')
+    $svg.setAttribute('height', '200')
+    $svg.style = cssRules
+  }
 
   return $icon
 }

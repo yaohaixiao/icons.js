@@ -184,7 +184,7 @@ Type: `String`
 
 Default: ``
 
-（必须）图标名称（图标集中所包含的图标的名称）。
+（必须）图标名称（图标集中所包含的图标的名称）或者 svg 字符串。
 
 ##### options
 
@@ -221,8 +221,8 @@ Type: `HTMLElement`
 ```html
 <ul class="toolbar">
   <li class="toolbar__item" id="up"></li>
+  <li class="toolbar__item" id="home"></li>
   <li class="toolbar__item" id="down"></li>
-  <li class="toolbar__item" id="tips"></li>
 </ul>
 ```
 
@@ -233,6 +233,7 @@ import createElement from '@yaohaixiao/icons.js/createElement'
 
 const $up = document.querySelector('#up')
 const $down = document.querySelector('#down')
+const $home = document.querySelector('#home')
 
 icons.paint()
 
@@ -248,6 +249,17 @@ const $iconDown = createElement('down', {
   iconSet: 'rdc'
 })
 $down.appendChild($iconDown)
+
+const svg = '<svg viewBox="0 0 16 16">’ + ' +
+        '<path d="M16 9.5l-3-3v-4.5h-2v2.5l-3-3-8 8v0.5h2v5h5v-3h2v3h5v-5h2z"></path>‘ +' +
+        '</svg>'
+// 传递 options 参数，控制图标样式
+const $iconHome = createElement(svg, {
+  size: 24, // [24, 26]
+  color: '#f00',
+  iconSet: 'rdc'
+})
+$home.appendChild($iconHome)
 ```
 
 
@@ -271,7 +283,7 @@ Type: `String`
 
 Default: ``
 
-（必须）图标名称（图标集中所包含的图标的名称）。
+（必须）图标名称（图标集中所包含的图标的名称）或者 svg 字符串。。
 
 ###### options
 
@@ -312,6 +324,11 @@ appendTo('#down', 'down', {
   color: '#f00',
   iconSet: 'rdc'
 })
+
+const svg = '<svg viewBox="0 0 16 16">’ + ' +
+        '<path d="M16 9.5l-3-3v-4.5h-2v2.5l-3-3-8 8v0.5h2v5h5v-3h2v3h5v-5h2z"></path>‘ +' +
+        '</svg>'
+appendTo('#tips', svg)
 ```
 
 
