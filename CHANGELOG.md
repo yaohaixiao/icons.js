@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/yaohaixiao/icons.js/compare/1.2.0...1.3.0) (2023-08-11)
+
+
+### Features
+
+* 添加 icons 资源文件 ([b45767d](https://github.com/yaohaixiao/icons.js/commit/b45767d6a772e9a3df6b1cb86e03c271545e4d4d))
+
+
+
 # [1.2.0](https://github.com/yaohaixiao/icons.js/compare/1.1.0...1.2.0) (2023-08-07)
 
 
