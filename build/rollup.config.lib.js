@@ -31,5 +31,15 @@ export default [
       sourcemap: true
     },
     plugins: PLUGIN_CONFIG
+  },
+  {
+    input: './assets/icons.js',
+    output: {
+      name: 'icons',
+      file: './assets/icons.umd.js',
+      format: 'umd',
+      sourcemap: true
+    },
+    plugins: PLUGIN_CONFIG
   }
 ]

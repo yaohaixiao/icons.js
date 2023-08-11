@@ -1,4 +1,4 @@
-import DEFAULTS from './defaults'
+import DEFAULTS from './assets/icons'
 import SYMBOLS from './symbols'
 import APPENDS from './appends'
 
