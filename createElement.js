@@ -6,11 +6,11 @@ import isSVG from './utils/isSVG'
  * 创建 SVG 图标 DOM 元素
  * ========================================================================
  * @method createElement
- * @param {String} name
- * @param {Object} [options]
- * @param {Number|Array} [options.size]
- * @param {String} [options.color]
- * @param {String} [options.iconSet]
+ * @param {String} name - （必须）当前图标集中的图标名称或者完整的 SVG 图标字符串
+ * @param {Object} [options] - （可选）配置参数对象
+ * @param {Number|Array} [options.size] - （可选）图标大小，Number 类型高和宽相等，Array 类型可以单独设置高和宽
+ * @param {String} [options.color] - （可选）图标颜色
+ * @param {String} [options.iconSet] - （可选）图标集的名称
  * @returns {HTMLElement}
  */
 const createElement = (name, options = {}) => {
@@ -53,7 +53,7 @@ const createElement = (name, options = {}) => {
     $svg.setAttribute('class', 'ijs-icon__svg')
     $svg.setAttribute('width', '200')
     $svg.setAttribute('height', '200')
-    $svg.style = cssRules
+    $svg.style.cssText = cssRules
   }
 
   return $icon

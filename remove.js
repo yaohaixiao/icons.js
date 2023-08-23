@@ -3,6 +3,14 @@ import getSymbol from './getSymbol'
 import getSymbols from './getSymbols'
 import SYMBOLS from './symbols'
 
+/**
+ * 通过名称移除图标集中的 symbol
+ * ========================================================================
+ * @method remove
+ * @param {String} name - 图标名称
+ * @param {String} [iconSet] - （可选）图标集名称，默认值：icon
+ * @return {boolean}
+ */
 const remove = (name, iconSet = 'icon') => {
   const $icons = document.querySelector('#ijs-icons')
   const symbols = getSymbols()

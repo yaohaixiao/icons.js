@@ -4,8 +4,10 @@ import SYMBOLS from './symbols'
 import APPENDS from './appends'
 
 /**
+ * 向图标集中添加单个或者 symbol
+ * =============================================================
  * @method add
- * @param {Array|String} symbols
+ * @param {Array|String} symbols - 单个或者多个 svg 图标 symbol
  * @return {Boolean}
  */
 const add = (symbols) => {

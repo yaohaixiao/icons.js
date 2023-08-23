@@ -3,7 +3,8 @@ import isString from './utils/isString'
 import createElement from './createElement'
 
 /**
- *
+ * 将通过 createElement() 方法创建的图标添加到指定的 DOM 元素中
+ * =============================================================
  * @method appendTo
  * @param {HTMLElement|String} el
  * @param {String} name

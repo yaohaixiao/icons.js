@@ -18,16 +18,18 @@
  * Icon.vue - SVG 图标显示组件
  * =============================================================
  * Created By: Yaohaixiao
- * Update: 2024.07.27
+ * Update: 2023.08.22
  */
-import isSVG from './utils/isSVG'
+import isSVG from '../utils/isSVG'
 import isArray from '../utils/isArray'
-import appendTo from './appendTo'
+import appendTo from '../appendTo'
 
 export default {
   name: 'IjsIcon',
   componentName: 'IjsIcon',
   props: {
+    // icons.js 自带的默认图标名称
+    // 或者 SVG 图标字符串
     name: {
       type: String,
       default: ''
@@ -91,6 +93,9 @@ export default {
       return false
     }
 
+    // 当 name 是一个完整 SVG 图标字符串时，
+    // 使用 icons.js 中 appendTo 方法，
+    // 直接将 SVG 图标绘制到 this.$el 中
     this.$nextTick(() => {
       appendTo($icon, name, options)
     })

@@ -1,6 +1,8 @@
 import SYMBOLS from './symbols'
 
 /**
+ * 通过名称获取图标集中的 symbol
+ * ========================================================================
  * @method getSymbol
  * @param {String} name
  * @param {String} [iconSet]
