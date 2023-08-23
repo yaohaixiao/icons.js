@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/yaohaixiao/icons.js/compare/1.3.0...1.3.1) (2023-08-23)
+
+
+### Bug Fixes
+
+* 1. 修复 icon.vue 组件中应用模块路径错误的问题；2. 修复 createElement() 方法中使用 style.cssText 设置多个样式的问题；3. 添加各个方法的基本注释； ([5231596](https://github.com/yaohaixiao/icons.js/commit/5231596d3d7a2a0cee3ed7e78789af741c19e232))
+
+
+
 # [1.3.0](https://github.com/yaohaixiao/icons.js/compare/1.2.0...1.3.0) (2023-08-11)
 
 
