@@ -68,7 +68,7 @@ npm i @yaohaixiao/icons.js
 
 ## 默认图标集
 
-[icons.js 的默认图标集](https://yaohaixiao.github.io/icons.toolkit.vue/#/default)仅提供了 48 个常用 svg 图标：
+[icons.js 的默认图标集](https://yaohaixiao.github.io/icons.toolkit.vue/#/default) 仅提供了 54 个常用 svg 图标：
 
 ```js
 const Icons = [
