@@ -1,3 +1,12 @@
+## [1.4.1](https://github.com/yaohaixiao/icons.js/compare/1.4.0...1.4.1) (2023-08-23)
+
+
+### Bug Fixes
+
+* 1.4.1 修复文件配置导致无法读取 components 和 utils 目录的文件 ([9344e4e](https://github.com/yaohaixiao/icons.js/commit/9344e4ebfe13b217de0e9cc73de6343853979e1c))
+
+
+
 # [1.4.0](https://github.com/yaohaixiao/icons.js/compare/1.3.1...1.4.0) (2023-08-23)
 
 
