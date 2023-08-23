@@ -53,14 +53,14 @@ npm i @yaohaixiao/icons.js
 ### CDN 调用
 
 ```html
-<link href="https://cdn.jsdelivr.net/gh/yaohaixiao/icons.js/icons.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/gh/yaohaixiao/icons.js/icon.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/gh/yaohaixiao/icons.js/icons.min.js"></script>
 ```
 
 ### 调用本地JS文件
 
 ```html
-<link href="path/to/icons.min.css" rel="stylesheet" /></script>
+<link href="path/to/icon.min.css" rel="stylesheet" /></script>
 <script src="path/to/icons.min.js"></script>
 ```
 

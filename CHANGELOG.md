@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/yaohaixiao/icons.js/compare/1.4.1...1.5.0) (2023-08-23)
+
+
+### Features
+
+* 添加 6 个新的内置图标 ([55ee30a](https://github.com/yaohaixiao/icons.js/commit/55ee30a12ba3a0b60e8f081350556a92c372f5c9))
+
+
+
 ## [1.4.1](https://github.com/yaohaixiao/icons.js/compare/1.4.0...1.4.1) (2023-08-23)
 
 
