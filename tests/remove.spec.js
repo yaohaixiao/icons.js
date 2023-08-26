@@ -19,13 +19,13 @@ describe('remove() 方法：', () => {
 
   it(`remove('up'), 移除：up 图标`, () => {
     remove('up')
-    expect(count()).toEqual(47)
+    expect(count()).toEqual(59)
     expect(getSymbol('up')).toEqual(undefined)
   })
 
   it(`remove('down', 'icon'), 移除：down 图标`, () => {
     remove('down', 'icon')
-    expect(count()).toEqual(46)
+    expect(count()).toEqual(58)
     expect(getSymbol('down')).toEqual(undefined)
   })
 
@@ -39,12 +39,12 @@ describe('remove() 方法：', () => {
     $symbol = $icons.querySelector(`#${iconSet}-icon-npm`)
 
     expect($symbol.id).toEqual(`${iconSet}-icon-npm`)
-    expect(count()).toEqual(47)
+    expect(count()).toEqual(59)
     expect(getSymbol('npm', iconSet)).toEqual(NPM)
 
     remove('npm', iconSet)
     $symbol = $icons.querySelector(`#${iconSet}-icon-npm`)
-    expect(count()).toEqual(46)
+    expect(count()).toEqual(58)
     expect(getSymbol('npm', iconSet)).toEqual(undefined)
     expect($symbol).toEqual(null)
 

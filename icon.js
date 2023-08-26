@@ -11,6 +11,7 @@ import createElement from './createElement'
  * @param {Number|Array} [options.size]
  * @param {String} [options.color]
  * @param {String} [options.iconSet]
+ * @param {Object} [options.attrs]
  * @returns {HTMLElement}
  */
 const icon = (name, options = {}) => {

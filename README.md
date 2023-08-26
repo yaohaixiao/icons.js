@@ -205,11 +205,12 @@ Default: `{}`
 （可选）；
 
 
-| Name      | Type                   | Default | Description                                                                           |
-|-----------|------------------------|---------|---------------------------------------------------------------------------------------|
-| `size`    | `Number, String, Array`| ''      | 可选，用来指定 icon 图标大小。number 和 string 类型时，可选值为 0 以上的整数, 宽度和高度值相等；array时数组长度为 2，分别代表宽度和高度； |
-| `color`   | `String`               | ''      | 可选，用来指定 icon 图标颜色。                                                                    |                                                                   |
-| `iconSet` | `String`               | 'icon'  | 可选，用来指定 icon 图标集的名称。                                                                  |
+| Name      | Type                    | Default | Description                                                                           |
+|-----------|-------------------------|---------|---------------------------------------------------------------------------------------|
+| `size`    | `Number, String, Array` | ''      | 可选，用来指定 icon 图标大小。number 和 string 类型时，可选值为 0 以上的整数, 宽度和高度值相等；array时数组长度为 2，分别代表宽度和高度； |
+| `color`   | `String`                | ''      | 可选，用来指定 icon 图标颜色。                                                                    |                                                                   |
+| `iconSet` | `String`                | 'icon'  | 可选，用来指定 icon 图标集的名称。                                                                  |
+| `attrs`   | `Object`                | ''  | 可选，给创建的 icons 元素设置的 HTML 属性对象。                                                                  |
 
 
 ##### Returns
@@ -267,7 +268,15 @@ const svg = '<svg viewBox="0 0 16 16">’ + ' +
 const $iconHome = createElement(svg, {
   size: 24, // [24, 26]
   color: '#f00',
-  iconSet: 'rdc'
+  iconSet: 'rdc',
+  // 设置图标的 HTML 属性，只要是 DOM.setAttribute 支持的 HTML 都可以
+  attrs: {
+    // 添加交互或者计算需要的 data 属性值
+    'data-icon': 'custom-icon',
+    // 创建的 svg DOM 元素的完整className = 'ijs-icon custom-icon'
+    // 会自动添加上 icons.js 自带的 ijs-icon 默认的 className
+    className: 'custom-icon'
+  }
 })
 $home.appendChild($iconHome)
 ```

@@ -9,6 +9,10 @@ import createElement from './createElement'
  * @param {HTMLElement|String} el
  * @param {String} name
  * @param {Object} [options]
+ * @param {Number|Array} [options.size]
+ * @param {String} [options.color]
+ * @param {String} [options.iconSet]
+ * @param {Object} [options.attrs]
  */
 const appendTo = (el, name, options) => {
   let $el

@@ -1,6 +1,7 @@
 import isArray from './utils/isArray'
 import isString from './utils/isString'
 import isSVG from './utils/isSVG'
+import setAttributes from './utils/setAttributes'
 
 /**
  * 创建 SVG 图标 DOM 元素
@@ -11,6 +12,7 @@ import isSVG from './utils/isSVG'
  * @param {Number|Array} [options.size] - （可选）图标大小，Number 类型高和宽相等，Array 类型可以单独设置高和宽
  * @param {String} [options.color] - （可选）图标颜色
  * @param {String} [options.iconSet] - （可选）图标集的名称
+ * @param {Object} [options.attrs] - （可选）给创建的 icons 元素设置的 HTML 属性对象
  * @returns {HTMLElement}
  */
 const createElement = (name, options = {}) => {
@@ -22,6 +24,7 @@ const createElement = (name, options = {}) => {
   const defaultRules = size ? `width:${width}px;height:${height}px;` : ''
   const cssRules = color ? defaultRules + `color:${color}` : defaultRules
   const $icon = document.createElement('i')
+  const attrs = options.attrs || {}
   let binds = ''
   let svg = ''
   let $svg
@@ -43,17 +46,25 @@ const createElement = (name, options = {}) => {
       `</svg>`
   }
 
-  $icon.className = 'ijs-icon'
+  if (attrs.className) {
+    attrs.className = 'ijs-icon ' + attrs.className
+  } else {
+    attrs.className = 'ijs-icon'
+  }
+
+  setAttributes($icon, attrs)
   $icon.innerHTML = svg
 
   if (isSVG(name)) {
     $svg = $icon.querySelector('svg')
-    $svg.setAttribute('aria-hidden', 'true')
-    $svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-    $svg.setAttribute('class', 'ijs-icon__svg')
-    $svg.setAttribute('width', '200')
-    $svg.setAttribute('height', '200')
-    $svg.style.cssText = cssRules
+    setAttributes($svg, {
+      'aria-hidden': true,
+      xmlns: 'http://www.w3.org/2000/svg',
+      class: 'ijs-icon__svg',
+      width: 200,
+      height: 200,
+      style: cssRules
+    })
   }
 
   return $icon
