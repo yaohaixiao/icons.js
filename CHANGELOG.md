@@ -1,3 +1,12 @@
+# [1.7.0](https://github.com/yaohaixiao/icons.js/compare/1.6.0...1.7.0) (2023-08-26)
+
+
+### Features
+
+* 添加 count() 方法；添加 API 文档；调整工程打包配置； ([582760c](https://github.com/yaohaixiao/icons.js/commit/582760cb0e3acfd3a5fef87b211319708c902355))
+
+
+
 # [1.6.0](https://github.com/yaohaixiao/icons.js/compare/1.5.0...1.6.0) (2023-08-26)
 
 
