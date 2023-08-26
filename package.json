@@ -25,6 +25,7 @@
     "symbols.js"
   ],
   "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "build:script": "rollup -c build/rollup.config.lib.js --bundleConfigAsCjs",
     "build:style": "gulp build",
     "build:svg": "node build/build.single.svg.js",
@@ -35,8 +36,7 @@
     "prettier:write": "npx prettier --write \"./**/*.(js|less|vue)\"",
     "test:unit": "jest --config jest.config.js",
     "test": "npm run lint:fix && npm run prettier:write && npm run test:unit",
-    "prepare": "husky install",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",

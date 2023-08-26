@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/yaohaixiao/icons.js/compare/1.5.0...1.6.0) (2023-08-26)
+
+
+### Features
+
+* 扩展 createElement() 和 icon() 以及 appendTo() 方法中 options 参数的配置，新增 attrs 扩展 HTML 属性配置项，以便更好的控制 icons.js 创建的图标元素的样式 ([9f37d1c](https://github.com/yaohaixiao/icons.js/commit/9f37d1c91901d782cf354ad6c152ddae64f458cb))
+
+
+
 # [1.5.0](https://github.com/yaohaixiao/icons.js/compare/1.4.1...1.5.0) (2023-08-23)
 
 
