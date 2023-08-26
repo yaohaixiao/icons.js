@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="icon.js,JavaScript,svg,icon,Toolkit"><meta name="description" content="icon.js - 专门用来显示 svg 图标的 JavaScript 小工具。"><link rel="shortcut icon" href="./favicon.ico"><title>icons.js | 专门用来显示 svg 图标的 JavaScript 小工具。</title><link rel="preload" href="css/docs.min.css" as="style"><link rel="preload" href="css/docs.min.js" as="script"><link href="css/docs.min.css" rel="stylesheet" type="text/css"></head><body><div class="docs" id="docs"><aside class="aside" id="aside"><header class="aside__header"><h2 class="aside__h2">API Documentation</h2></header></aside><main class="main" id="main"><header class="main__header" id="header"><h1 class="main__h1"><strong class="main__name">icons.</strong>js</h1><p class="main__tagline">icons.js - 专门用来显示 svg 图标的 JavaScript 小工具。</p></header><div class="main__cdn" id="cdn"><pre class="main__pre"><code>&lt;script src="https://cdn.jsdelivr.net/gh/yaohaixiao/icons.js/icons.min.js"&gt;&lt;/script&gt;</code></pre></div><div class="main__download" id="download"><a class="main__button" href="https://github.com/yaohaixiao/icons.js/archive/refs/heads/main.zip" target="_blank">Download Zip</a></div><article id="article"><section class="section"><header class="section__header"><h2 class="section__title">Methods</h2></header><div class="section__content"><p>icons.js 的提供了 9 个公共方法：</p></div><section class="section"><header class="section__header"><h3 class="section__h3">add(symbol)</h3></header><div class="section__content"><h4 class="section__h4">Description</h4><p>add() 方法用于先现有图标集中添加 svg 图标 symbol 数据。</p><h4 class="section__h4">Parameters</h4><h5 class="section__h4">symbol</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String|Array</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">''</dd></dl><p>（必须）单个或者多个图标 symbol 数组。</p><h4 class="section__h4">Returns</h4><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">icons</dd></dl><p>icons 对象，以便链式调用。</p><pre class="section__pre"><code class="section__code">import icons from '@yaohaixiao/icons.js/icons'
+// 或者引入独立方法
+import add from '@yaohaixiao/icons.js/add'
+
+const ICONS = [
+  '&lt;symbol id="rdc-icon-unlink" viewBox="0 0 16 16">&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M11.1344 14.6172C11.5191 15.0019 12.1428 15.0019 12.5275 14.6172C12.9122 14.2325 12.9122 13.6088 12.5275 13.2241L2.77592 3.47247C2.39123 3.08778 1.76753 3.08778 1.38284 3.47247C0.998145 3.85716 0.998145 4.48086 1.38284 4.86555L2.07938 5.5621L1.73111 5.91037C-0.577036 8.21851 -0.577036 11.9608 1.73111 14.2689C4.03925 16.577 7.78149 16.577 10.0896 14.2689L10.4379 13.9206L11.1344 14.6172ZM9.04482 12.5275L3.47247 6.95518L3.12419 7.30346C1.58543 8.84222 1.58543 11.337 3.12419 12.8758C4.66296 14.4146 7.15778 14.4146 8.69654 12.8758L9.04482 12.5275Z" /><path d="M5.21383 2.42765C4.82913 2.81234 4.82914 3.43605 5.21383 3.82074C5.59852 4.20543 6.22222 4.20543 6.60691 3.82074L7.30346 3.12419C8.84222 1.58543 11.337 1.58543 12.8758 3.12419C14.4146 4.66296 14.4146 7.15778 12.8758 8.69654L12.1793 9.39309C11.7946 9.77778 11.7946 10.4015 12.1793 10.7862C12.564 11.1709 13.1877 11.1709 13.5724 10.7862L14.2689 10.0896C16.577 7.78149 16.577 4.03925 14.2689 1.73111C11.9608 -0.577036 8.21851 -0.577036 5.91037 1.73111L5.21383 2.42765Z">&lt;/path>&lt;/symbol>',
+  '&lt;symbol id="rdc-icon-npm" viewBox="0 0 2500 2500">&lt;path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff">&lt;/path>&lt;/symbol>'
+]
+const DELETE = '&lt;symbol id="rdc-icon-delete" viewBox="0 0 1024 1024">&lt;path d="M732.48 724.288a33.792 33.792 0 0 1-48.448 0l-182.976-184.32-185.664 183.68a34.56 34.56 0 0 1-49.152 0 33.792 33.792 0 0 1 0-48.512l186.368-184.32L276.48 314.688a33.792 33.792 0 0 1 0-48.448 33.792 33.792 0 0 1 48.448 0L501.12 443.072l178.88-176.832a34.56 34.56 0 0 1 49.152 0 33.792 33.792 0 0 1 0 48.448L549.568 492.224l182.272 183.616a34.432 34.432 0 0 1 0.64 48.448z">&lt;/path>&lt;/symbol>'
+
+// 参数为 array 类型，追加多个图标
+// 追加绘制 NPM 图标
+icons.add(ICONS)
+add(DELETE)</code></pre></div></section><section class="section"><header class="section__header"><h3 class="section__h3">appendTo(el, name[, options])</h3></header><div class="section__content"><h4 class="section__h4">Description</h4><p>appendTo() 方法用于创建显示 svg 图标 DOM 元素，并添加到指定的 el DOM 元素。</p><h4 class="section__h4">Parameters</h4><h5 class="section__h4">el</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String|HTMLElement</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">''</dd></dl><p>（必须）希望显示图标的 DOM 元素或者 DOM 元素的选择器。</p><h5 class="section__h4">name</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">''</dd></dl><p>（必须）当前图标集中的图标名称或者完整的 SVG 图标字符串。</p><h5 class="section__h4">options</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">Object</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">{}</dd></dl><p>（可选）创建 SVG 图标需要的参数对象。</p><ul><li>options.size：可选，用来指定 icon 图标大小。number 和 string 类型时，可选值为 0 以上的整数, 宽度和高度值相等；array时数组长度为 2，分别代表宽度和高度；</li><li>options.color：可选，用来指定 icon 图标颜色。</li><li>options.iconSet：可选，用来指定 icon 图标集的名称。默认值：'icon'</li><li>options.attrs：可选，给创建的 icons 元素设置的 HTML 属性对象。</li></ul><h4 class="section__h4">Returns</h4><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">icons</dd></dl><p>icons 对象，以便链式调用。</p><pre class="section__pre"><code class="section__code">import icons from '@yaohaixiao/icons.js/icons'
+// 或者引入独立方法
+import createElement from '@yaohaixiao/icons.js/createElement'
+
+icons.paint()
+
+// 使用默认参数
+icons.appendTo('#up', 'up')
+// 自定义参数
+appendTo('#down', 'down', {
+  size: 24, // [24, 26]
+  color: '#f00',
+  iconSet: 'rdc'
+})
+
+// 使用 SVG 图标字符串
+const svg = '&lt;svg viewBox="0 0 16 16">’ + ' +
+        '&lt;path d="M16 9.5l-3-3v-4.5h-2v2.5l-3-3-8 8v0.5h2v5h5v-3h2v3h5v-5h2z">&lt;/path>‘ +' +
+        '&lt;/svg>'
+appendTo('#tips', svg)</code></pre></div></section><section class="section"><header class="section__header"><h3 class="section__h3">clear()</h3></header><div class="section__content"><h4 class="section__h4">Description</h4><p>clear() 方法用于清理在页面中绘制 svg sprites 的图标集，会移除图标集 DOM 元素。同时将图标集数据恢复为初始默认的 60 个图标。</p><h4 class="section__h4">Returns</h4><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">icons</dd></dl><p>icons 对象，便于链式方法调用。</p><pre class="section__pre"><code class="section__code">import icons from '@yaohaixiao/icons.js/icons'
+// 或者引入独立方法
+import clear from '@yaohaixiao/icons.js/clear'
+
+const ICONS = [
+  '&lt;symbol id="rdc-icon-unlink" viewBox="0 0 16 16">&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M11.1344 14.6172C11.5191 15.0019 12.1428 15.0019 12.5275 14.6172C12.9122 14.2325 12.9122 13.6088 12.5275 13.2241L2.77592 3.47247C2.39123 3.08778 1.76753 3.08778 1.38284 3.47247C0.998145 3.85716 0.998145 4.48086 1.38284 4.86555L2.07938 5.5621L1.73111 5.91037C-0.577036 8.21851 -0.577036 11.9608 1.73111 14.2689C4.03925 16.577 7.78149 16.577 10.0896 14.2689L10.4379 13.9206L11.1344 14.6172ZM9.04482 12.5275L3.47247 6.95518L3.12419 7.30346C1.58543 8.84222 1.58543 11.337 3.12419 12.8758C4.66296 14.4146 7.15778 14.4146 8.69654 12.8758L9.04482 12.5275Z" /><path d="M5.21383 2.42765C4.82913 2.81234 4.82914 3.43605 5.21383 3.82074C5.59852 4.20543 6.22222 4.20543 6.60691 3.82074L7.30346 3.12419C8.84222 1.58543 11.337 1.58543 12.8758 3.12419C14.4146 4.66296 14.4146 7.15778 12.8758 8.69654L12.1793 9.39309C11.7946 9.77778 11.7946 10.4015 12.1793 10.7862C12.564 11.1709 13.1877 11.1709 13.5724 10.7862L14.2689 10.0896C16.577 7.78149 16.577 4.03925 14.2689 1.73111C11.9608 -0.577036 8.21851 -0.577036 5.91037 1.73111L5.21383 2.42765Z">&lt;/path>&lt;/symbol>',
+  '&lt;symbol id="rdc-icon-npm" viewBox="0 0 2500 2500">&lt;path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff">&lt;/path>&lt;/symbol>'
+]
+
+// 参数为 array 类型，追加多个图标
+// 追加绘制 NPM 图标
+icons.paint(ICONS)
+// 将移除图标集元素
+icons.clear()
+
+// 再次绘制图标集元素，之前追加的2个图标已经清除
+icons.paint()</code></pre></div></section><section class="section"><header class="section__header"><h3 class="section__h3">count()</h3></header><div class="section__content"><h4 class="section__h4">Description</h4><p>count() 方法专门用来获取图标集图标数量。</p><h4 class="section__h4">Returns</h4><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">Number</dd></dl><p>返回目前图标集中图标的数量。</p><pre class="section__pre"><code class="section__code">import icons from '@yaohaixiao/icons.js/icons'
+// 或者引入独立方法
+import count from '@yaohaixiao/icons.js/clear'
+
+const ICONS = [
+  '&lt;symbol id="rdc-icon-unlink" viewBox="0 0 16 16">&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M11.1344 14.6172C11.5191 15.0019 12.1428 15.0019 12.5275 14.6172C12.9122 14.2325 12.9122 13.6088 12.5275 13.2241L2.77592 3.47247C2.39123 3.08778 1.76753 3.08778 1.38284 3.47247C0.998145 3.85716 0.998145 4.48086 1.38284 4.86555L2.07938 5.5621L1.73111 5.91037C-0.577036 8.21851 -0.577036 11.9608 1.73111 14.2689C4.03925 16.577 7.78149 16.577 10.0896 14.2689L10.4379 13.9206L11.1344 14.6172ZM9.04482 12.5275L3.47247 6.95518L3.12419 7.30346C1.58543 8.84222 1.58543 11.337 3.12419 12.8758C4.66296 14.4146 7.15778 14.4146 8.69654 12.8758L9.04482 12.5275Z" /><path d="M5.21383 2.42765C4.82913 2.81234 4.82914 3.43605 5.21383 3.82074C5.59852 4.20543 6.22222 4.20543 6.60691 3.82074L7.30346 3.12419C8.84222 1.58543 11.337 1.58543 12.8758 3.12419C14.4146 4.66296 14.4146 7.15778 12.8758 8.69654L12.1793 9.39309C11.7946 9.77778 11.7946 10.4015 12.1793 10.7862C12.564 11.1709 13.1877 11.1709 13.5724 10.7862L14.2689 10.0896C16.577 7.78149 16.577 4.03925 14.2689 1.73111C11.9608 -0.577036 8.21851 -0.577036 5.91037 1.73111L5.21383 2.42765Z">&lt;/path>&lt;/symbol>',
+  '&lt;symbol id="rdc-icon-npm" viewBox="0 0 2500 2500">&lt;path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff">&lt;/path>&lt;/symbol>'
+]
+
+icons.paint()
+// 默认 60 个图标
+console.log(icons.count()) // -> 60
+
+// 追加2个图标
+icons.paint(ICONS)
+console.log(count()) // -> 62</code></pre></div></section><section class="section"><header class="section__header"><h3 class="section__h3">createElement(name[, options])</h3></header><div class="section__content"><h4 class="section__h4">Description</h4><p>createElement() 方法用于创建显示 svg 图标 DOM 元素。</p><h4 class="section__h4">Parameters</h4><h5 class="section__h4">name</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">''</dd></dl><p>（必须）当前图标集中的图标名称或者完整的 SVG 图标字符串。</p><h5 class="section__h4">options</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">Object</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">{}</dd></dl><p>（可选）创建 SVG 图标需要的参数对象。</p><ul><li>options.size：可选，用来指定 icon 图标大小。number 和 string 类型时，可选值为 0 以上的整数, 宽度和高度值相等；array时数组长度为 2，分别代表宽度和高度；</li><li>options.color：可选，用来指定 icon 图标颜色。</li><li>options.iconSet：可选，用来指定 icon 图标集的名称。默认值：'icon'</li><li>options.attrs：可选，给创建的 icons 元素设置的 HTML 属性对象。</li></ul><h4 class="section__h4">Returns</h4><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">HTMLElement</dd></dl><p>返回创建的 SVG 图标 DOM 元素。</p><pre class="section__pre"><code class="section__code">import icons from '@yaohaixiao/icons.js/icons'
+// 或者引入独立方法
+import createElement from '@yaohaixiao/icons.js/createElement'
+
+const $up = document.querySelector('#up')
+const $down = document.querySelector('#down')
+const $home = document.querySelector('#home')
+
+icons.paint()
+
+// 使用 icon() 方法创建一个包含显示 up 图标的 i 标签:
+const $iconUp = icons.createElement('up')
+// 在 id="up" 的工具栏按钮中显示向上图标
+$up.appendChild($iconUp)
+
+// 传递 icons 参数，控制图标样式
+const $iconDown = createElement('down', {
+  size: 24, // [24, 26]
+  color: '#f00',
+  iconSet: 'rdc'
+})
+$down.appendChild($iconDown)
+
+const svg = '&lt;svg viewBox="0 0 16 16">’ + ' +
+        '&lt;path d="M16 9.5l-3-3v-4.5h-2v2.5l-3-3-8 8v0.5h2v5h5v-3h2v3h5v-5h2z">&lt;/path>‘ +' +
+        '&lt;/svg>'
+// 传递 icons 参数，控制图标样式
+const $iconHome = createElement(svg, {
+  size: 24, // [24, 26]
+  color: '#f00',
+  iconSet: 'rdc',
+  // 设置图标的 HTML 属性，只要是 DOM.setAttribute 支持的 HTML 都可以
+  attrs: {
+    // 添加交互或者计算需要的 data 属性值
+    'data-icon': 'custom-icon',
+    // 创建的 svg DOM 元素的完整className = 'ijs-icon custom-icon'
+    // 会自动添加上 icons.js 自带的 ijs-icon 默认的 className
+    className: 'custom-icon'
+  }
+})
+$home.appendChild($iconHome)</code></pre></div></section><section class="section"><header class="section__header"><h3 class="section__h3">icon(name[, options])</h3></header><div class="section__content"><h4 class="section__h4">Description</h4><p>icon() 方法用于创建显示 svg 图标 DOM 元素，是 createElement() 方法的别名。</p><h4 class="section__h4">Parameters</h4><h5 class="section__h4">name</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">''</dd></dl><p>（必须）当前图标集中的图标名称或者完整的 SVG 图标字符串。</p><h5 class="section__h4">options</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">Object</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">{}</dd></dl><p>（可选）创建 SVG 图标需要的参数对象。</p><ul><li>options.size：可选，用来指定 icon 图标大小。number 和 string 类型时，可选值为 0 以上的整数, 宽度和高度值相等；array时数组长度为 2，分别代表宽度和高度；</li><li>options.color：可选，用来指定 icon 图标颜色。</li><li>options.iconSet：可选，用来指定 icon 图标集的名称。默认值：'icon'</li><li>options.attrs：可选，给创建的 icons 元素设置的 HTML 属性对象。</li></ul><h4 class="section__h4">Returns</h4><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">HTMLElement</dd></dl><p>返回创建的 SVG 图标 DOM 元素。</p><pre class="section__pre"><code class="section__code">import icons from '@yaohaixiao/icons.js/icons'
+// 或者引入独立方法
+import icon from '@yaohaixiao/icons.js/createElement'
+
+const $up = document.querySelector('#up')
+const $down = document.querySelector('#down')
+const $home = document.querySelector('#home')
+
+icons.paint()
+
+// 使用 icon() 方法创建一个包含显示 up 图标的 i 标签:
+const $iconUp = icons.icon('up')
+// 在 id="up" 的工具栏按钮中显示向上图标
+$up.appendChild($iconUp)
+
+// 传递 icons 参数，控制图标样式
+const $iconDown = icon('down', {
+  size: 24, // [24, 26]
+  color: '#f00',
+  iconSet: 'rdc'
+})
+$down.appendChild($iconDown)
+
+const svg = '&lt;svg viewBox="0 0 16 16">’ + ' +
+          '&lt;path d="M16 9.5l-3-3v-4.5h-2v2.5l-3-3-8 8v0.5h2v5h5v-3h2v3h5v-5h2z">&lt;/path>‘ +' +
+        '&lt;/svg>'
+// 传递 icons 参数，控制图标样式
+const $iconHome = icon(svg, {
+  size: 24, // [24, 26]
+  color: '#f00',
+  iconSet: 'rdc',
+  // 设置图标的 HTML 属性，只要是 DOM.setAttribute 支持的 HTML 都可以
+  attrs: {
+    // 添加交互或者计算需要的 data 属性值
+    'data-icon': 'custom-icon',
+    // 创建的 svg DOM 元素的完整className = 'ijs-icon custom-icon'
+    // 会自动添加上 icons.js 自带的 ijs-icon 默认的 className
+    className: 'custom-icon'
+  }
+})
+$home.appendChild($iconHome)</code></pre></div></section><section class="section"><header class="section__header"><h3 class="section__h3">paint([symbols = ''])</h3></header><div class="section__content"><h4 class="section__h4">Description</h4><p>paint() 方法用于在页面中绘制 svg sprites 的图标集，以便 createElement() 创建的图标元素可以正确显示。</p><h4 class="section__h4">Parameters</h4><h5 class="section__h4">symbols</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String|Array</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">''</dd></dl><p>（可选）单个或者多个 SVG 图标的 symbol。</p><h4 class="section__h4">Returns</h4><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">icons</dd></dl><p>icons 对象，便于链式方法调用。</p><pre class="section__pre"><code class="section__code">import icons from '@yaohaixiao/icons.js/icons'
+// 或者单独引入 paint 方法
+import icons from '@yaohaixiao/icons.js/paint'
+
+const NPM =
+  '&lt;symbol id="rdc-icon-npm" viewBox="0 0 2500 2500">' +
+  '&lt;path d="M0 0h2500v2500H0z" fill="#c00">&lt;/path>' +
+  '&lt;path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff">&lt;/path>' +
+  '&lt;/symbol>'
+
+const ICONS = [
+  '&lt;symbol id="rdc-icon-unlink" viewBox="0 0 16 16">&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M11.1344 14.6172C11.5191 15.0019 12.1428 15.0019 12.5275 14.6172C12.9122 14.2325 12.9122 13.6088 12.5275 13.2241L2.77592 3.47247C2.39123 3.08778 1.76753 3.08778 1.38284 3.47247C0.998145 3.85716 0.998145 4.48086 1.38284 4.86555L2.07938 5.5621L1.73111 5.91037C-0.577036 8.21851 -0.577036 11.9608 1.73111 14.2689C4.03925 16.577 7.78149 16.577 10.0896 14.2689L10.4379 13.9206L11.1344 14.6172ZM9.04482 12.5275L3.47247 6.95518L3.12419 7.30346C1.58543 8.84222 1.58543 11.337 3.12419 12.8758C4.66296 14.4146 7.15778 14.4146 8.69654 12.8758L9.04482 12.5275Z" /><path d="M5.21383 2.42765C4.82913 2.81234 4.82914 3.43605 5.21383 3.82074C5.59852 4.20543 6.22222 4.20543 6.60691 3.82074L7.30346 3.12419C8.84222 1.58543 11.337 1.58543 12.8758 3.12419C14.4146 4.66296 14.4146 7.15778 12.8758 8.69654L12.1793 9.39309C11.7946 9.77778 11.7946 10.4015 12.1793 10.7862C12.564 11.1709 13.1877 11.1709 13.5724 10.7862L14.2689 10.0896C16.577 7.78149 16.577 4.03925 14.2689 1.73111C11.9608 -0.577036 8.21851 -0.577036 5.91037 1.73111L5.21383 2.42765Z">&lt;/path>&lt;/symbol>',
+  '&lt;symbol id="rdc-icon-npm" viewBox="0 0 2500 2500">&lt;path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff">&lt;/path>&lt;/symbol>'
+]
+
+// 不添加参数，绘制默认图标
+icons.paint()
+paint()
+
+// 参数为 string 类型，追加绘制单个新图标
+icons.paint(NPM)
+paint(NPM)
+
+// 参数为 array 类型，追加多个图标
+icons.paint(ICONS)
+paint(ICONS)</code></pre></div></section><section class="section"><header class="section__header"><h3 class="section__h3">remove()</h3></header><div class="section__content"><h4 class="section__h4">Description</h4><p>remove() 方法用于删除现有图标集中的与给定 name 同名的图标。</p><h4 class="section__h4">Parameters</h4><h5 class="section__h4">name</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">''</dd></dl><p>（必须）当前图标集中的图标名。</p><h5 class="section__h4">icons</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">'icon'</dd></dl><p>（可选）图标集名称。</p><h4 class="section__h4">Returns</h4><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">icons</dd></dl><p>icons 对象，便于链式方法调用。</p><pre class="section__pre"><code class="section__code">import icons from '@yaohaixiao/icons.js/icons'
+// 或者引入独立方法
+import remove from '@yaohaixiao/icons.js/remove'
+
+const ICONS = [
+  '&lt;symbol id="rdc-icon-unlink" viewBox="0 0 16 16">&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M11.1344 14.6172C11.5191 15.0019 12.1428 15.0019 12.5275 14.6172C12.9122 14.2325 12.9122 13.6088 12.5275 13.2241L2.77592 3.47247C2.39123 3.08778 1.76753 3.08778 1.38284 3.47247C0.998145 3.85716 0.998145 4.48086 1.38284 4.86555L2.07938 5.5621L1.73111 5.91037C-0.577036 8.21851 -0.577036 11.9608 1.73111 14.2689C4.03925 16.577 7.78149 16.577 10.0896 14.2689L10.4379 13.9206L11.1344 14.6172ZM9.04482 12.5275L3.47247 6.95518L3.12419 7.30346C1.58543 8.84222 1.58543 11.337 3.12419 12.8758C4.66296 14.4146 7.15778 14.4146 8.69654 12.8758L9.04482 12.5275Z" /><path d="M5.21383 2.42765C4.82913 2.81234 4.82914 3.43605 5.21383 3.82074C5.59852 4.20543 6.22222 4.20543 6.60691 3.82074L7.30346 3.12419C8.84222 1.58543 11.337 1.58543 12.8758 3.12419C14.4146 4.66296 14.4146 7.15778 12.8758 8.69654L12.1793 9.39309C11.7946 9.77778 11.7946 10.4015 12.1793 10.7862C12.564 11.1709 13.1877 11.1709 13.5724 10.7862L14.2689 10.0896C16.577 7.78149 16.577 4.03925 14.2689 1.73111C11.9608 -0.577036 8.21851 -0.577036 5.91037 1.73111L5.21383 2.42765Z">&lt;/path>&lt;/symbol>',
+  '&lt;symbol id="rdc-icon-npm" viewBox="0 0 2500 2500">&lt;path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff">&lt;/path>&lt;/symbol>'
+]
+
+// 参数为 array 类型，追加多个图标
+// 追加绘制 NPM 图标
+icons.paint(ICONS)
+
+// 移除 up 图标
+icons.remove('up')
+// 移除 tips 图标
+remove('tips', 'rdc')</code></pre></div></section><section class="section"><header class="section__header"><h3 class="section__h3">symbols([name, iconSet='icon'])</h3></header><div class="section__content"><h4 class="section__h4">Description</h4><p>symbols() 方法用于获取先现有图标集中单个或者全部 svg 图标 symbol 数据。</p><h4 class="section__h4">Parameters</h4><h5 class="section__h4">name</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String|Array</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">''</dd></dl><p>（必须）当前图标集中的图标名或者多个图标名（数组）。</p><h5 class="section__h4">icons</h5><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">String</dd></dl><dl class="section__dl"><dt class="section__dt">Default：</dt><dd class="section__dd">'icon'</dd></dl><p>（可选）图标集名称。</p><h4 class="section__h4">Returns</h4><dl class="section__dl"><dt class="section__dt">Type：</dt><dd class="section__dd">icons</dd></dl><p>icons 对象，便于链式方法调用。</p><pre class="section__pre"><code class="section__code">import icons from '@yaohaixiao/icons.js/icons'
+// 或者引入独立方法
+import symbols from '@yaohaixiao/icons.js/symbols'
+
+const ICONS = [
+  '&lt;symbol id="rdc-icon-unlink" viewBox="0 0 16 16">&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M11.1344 14.6172C11.5191 15.0019 12.1428 15.0019 12.5275 14.6172C12.9122 14.2325 12.9122 13.6088 12.5275 13.2241L2.77592 3.47247C2.39123 3.08778 1.76753 3.08778 1.38284 3.47247C0.998145 3.85716 0.998145 4.48086 1.38284 4.86555L2.07938 5.5621L1.73111 5.91037C-0.577036 8.21851 -0.577036 11.9608 1.73111 14.2689C4.03925 16.577 7.78149 16.577 10.0896 14.2689L10.4379 13.9206L11.1344 14.6172ZM9.04482 12.5275L3.47247 6.95518L3.12419 7.30346C1.58543 8.84222 1.58543 11.337 3.12419 12.8758C4.66296 14.4146 7.15778 14.4146 8.69654 12.8758L9.04482 12.5275Z" /><path d="M5.21383 2.42765C4.82913 2.81234 4.82914 3.43605 5.21383 3.82074C5.59852 4.20543 6.22222 4.20543 6.60691 3.82074L7.30346 3.12419C8.84222 1.58543 11.337 1.58543 12.8758 3.12419C14.4146 4.66296 14.4146 7.15778 12.8758 8.69654L12.1793 9.39309C11.7946 9.77778 11.7946 10.4015 12.1793 10.7862C12.564 11.1709 13.1877 11.1709 13.5724 10.7862L14.2689 10.0896C16.577 7.78149 16.577 4.03925 14.2689 1.73111C11.9608 -0.577036 8.21851 -0.577036 5.91037 1.73111L5.21383 2.42765Z">&lt;/path>&lt;/symbol>',
+  '&lt;symbol id="rdc-icon-npm" viewBox="0 0 2500 2500">&lt;path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff">&lt;/path>&lt;/symbol>'
+]
+
+// 参数为 array 类型，追加多个图标
+// 追加绘制 NPM 图标
+icons.add(ICONS)
+
+// 获取全部
+icons.symbols()
+// 获取单个（只能获取默认图标集中的数据）
+symbols('up')
+// 获取单个，指定图标集
+symbols('unlink', 'rdc')</code></pre></div></section></section></article><footer class="main__footer" id="footer"><p>Copyright &copy; 2023 <a href="https://github.com/yaohaixiao">Robert Yao</a>, all right reserved.</p><p>Code licensed under&nbsp;<a href="http://opensource.org/licenses/mit-license.html">MIT License</a></p><p>Documentation licensed under<a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></p><p><a href="https://github.com/yaohaixiao/icons.js">View on GitHub</a> ·
+<a href="https://github.com/yaohaixiao/icons.js/issues">Issues</a></p></footer></main></div><script src="js/docs.min.js"></script></body></html>

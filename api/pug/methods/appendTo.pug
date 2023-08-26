@@ -1,0 +1,63 @@
+section.section
+  header.section__header
+    h3.section__h3 appendTo(el, name[, options])
+  div.section__content
+    h4.section__h4 Description
+    p appendTo() 方法用于创建显示 svg 图标 DOM 元素，并添加到指定的 el DOM 元素。
+    h4.section__h4 Parameters
+    h5.section__h4 el
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd String|HTMLElement
+    dl.section__dl
+      dt.section__dt Default：
+      dd.section__dd ''
+    p （必须）希望显示图标的 DOM 元素或者 DOM 元素的选择器。
+    h5.section__h4 name
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd String
+    dl.section__dl
+      dt.section__dt Default：
+      dd.section__dd ''
+    p （必须）当前图标集中的图标名称或者完整的 SVG 图标字符串。
+    h5.section__h4 options
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd Object
+    dl.section__dl
+      dt.section__dt Default：
+      dd.section__dd {}
+    p （可选）创建 SVG 图标需要的参数对象。
+    ul
+      li options.size：可选，用来指定 icon 图标大小。number 和 string 类型时，可选值为 0 以上的整数, 宽度和高度值相等；array时数组长度为 2，分别代表宽度和高度；
+      li options.color：可选，用来指定 icon 图标颜色。
+      li options.iconSet：可选，用来指定 icon 图标集的名称。默认值：'icon'
+      li options.attrs：可选，给创建的 icons 元素设置的 HTML 属性对象。
+    h4.section__h4 Returns
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd icons
+    p icons 对象，以便链式调用。
+    pre.section__pre
+      code.section__code.
+        import icons from '@yaohaixiao/icons.js/icons'
+        // 或者引入独立方法
+        import createElement from '@yaohaixiao/icons.js/createElement'
+
+        icons.paint()
+
+        // 使用默认参数
+        icons.appendTo('#up', 'up')
+        // 自定义参数
+        appendTo('#down', 'down', {
+          size: 24, // [24, 26]
+          color: '#f00',
+          iconSet: 'rdc'
+        })
+
+        // 使用 SVG 图标字符串
+        const svg = '&lt;svg viewBox="0 0 16 16">’ + ' +
+                '&lt;path d="M16 9.5l-3-3v-4.5h-2v2.5l-3-3-8 8v0.5h2v5h5v-3h2v3h5v-5h2z">&lt;/path>‘ +' +
+                '&lt;/svg>'
+        appendTo('#tips', svg)

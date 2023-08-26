@@ -104,6 +104,8 @@ const icons = require('@yaohaixiao/icons.js/assets/icons')
 
 另外还提供了独立的 .svg 文件和包含所有图标的 svg sprites 图标集：@yaohaixiao/icons.js/assets/icons.svg
 
+说明：为了优化性能，建议导入 icons.js 默认图标集请直接将 icons.svg 中的代码嵌入到页面的 HTML 代码中。如果还需要动态添加图标
+
 
 ## API Documentation
 
@@ -113,7 +115,7 @@ const icons = require('@yaohaixiao/icons.js/assets/icons')
 * **Icon.vue**：Icon.vue 是基于 VUE 2.6 的独立组件，用于在 VUE 项目中显示 svg 图标；
 * **icon.js**：icon.js 是 ES6 模块的独立功能函数，用于创建 svg 图标 DOM 元素的；
 
-
+完整 API 文档地址：[https://yaohaixiao.github.io/icons.js](https://yaohaixiao.github.io/icons.js)
 
 ### icons.js
 
@@ -253,7 +255,7 @@ const $iconUp = icons.createElement('up')
 // 在 id="up" 的工具栏按钮中显示向上图标
 $up.appendChild($iconUp)
 
-// 传递 options 参数，控制图标样式
+// 传递 icons 参数，控制图标样式
 const $iconDown = createElement('down', {
   size: 24, // [24, 26]
   color: '#f00',
@@ -264,7 +266,7 @@ $down.appendChild($iconDown)
 const svg = '<svg viewBox="0 0 16 16">’ + ' +
         '<path d="M16 9.5l-3-3v-4.5h-2v2.5l-3-3-8 8v0.5h2v5h5v-3h2v3h5v-5h2z"></path>‘ +' +
         '</svg>'
-// 传递 options 参数，控制图标样式
+// 传递 icons 参数，控制图标样式
 const $iconHome = createElement(svg, {
   size: 24, // [24, 26]
   color: '#f00',
@@ -410,7 +412,7 @@ Type: `String|Array`
 
 Default: ``
 
-（必须）单个或者多个图标 symbol 数。
+（必须）单个或者多个图标 symbol 数组。
 
 ##### Usage
 
@@ -621,7 +623,7 @@ const $iconUp = icon('up')
 // 在 id="up" 的工具栏按钮中显示向上图标
 $up.appendChild($iconUp)
 
-// 传递 options 参数，控制图标样式
+// 传递 icons 参数，控制图标样式
 const $iconTips = icon('tips', {
   size: 24, // [24, 26]
   color: '#f00',

@@ -1,0 +1,76 @@
+section.section
+  header.section__header
+    h3.section__h3 createElement(name[, options])
+  div.section__content
+    h4.section__h4 Description
+    p createElement() 方法用于创建显示 svg 图标 DOM 元素。
+    h4.section__h4 Parameters
+    h5.section__h4 name
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd String
+    dl.section__dl
+      dt.section__dt Default：
+      dd.section__dd ''
+    p （必须）当前图标集中的图标名称或者完整的 SVG 图标字符串。
+    h5.section__h4 options
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd Object
+    dl.section__dl
+      dt.section__dt Default：
+      dd.section__dd {}
+    p （可选）创建 SVG 图标需要的参数对象。
+    ul
+      li options.size：可选，用来指定 icon 图标大小。number 和 string 类型时，可选值为 0 以上的整数, 宽度和高度值相等；array时数组长度为 2，分别代表宽度和高度；
+      li options.color：可选，用来指定 icon 图标颜色。
+      li options.iconSet：可选，用来指定 icon 图标集的名称。默认值：'icon'
+      li options.attrs：可选，给创建的 icons 元素设置的 HTML 属性对象。
+    h4.section__h4 Returns
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd HTMLElement
+    p 返回创建的 SVG 图标 DOM 元素。
+    pre.section__pre
+      code.section__code.
+        import icons from '@yaohaixiao/icons.js/icons'
+        // 或者引入独立方法
+        import createElement from '@yaohaixiao/icons.js/createElement'
+
+        const $up = document.querySelector('#up')
+        const $down = document.querySelector('#down')
+        const $home = document.querySelector('#home')
+
+        icons.paint()
+
+        // 使用 icon() 方法创建一个包含显示 up 图标的 i 标签:
+        const $iconUp = icons.createElement('up')
+        // 在 id="up" 的工具栏按钮中显示向上图标
+        $up.appendChild($iconUp)
+
+        // 传递 icons 参数，控制图标样式
+        const $iconDown = createElement('down', {
+          size: 24, // [24, 26]
+          color: '#f00',
+          iconSet: 'rdc'
+        })
+        $down.appendChild($iconDown)
+
+        const svg = '&lt;svg viewBox="0 0 16 16">’ + ' +
+                '&lt;path d="M16 9.5l-3-3v-4.5h-2v2.5l-3-3-8 8v0.5h2v5h5v-3h2v3h5v-5h2z">&lt;/path>‘ +' +
+                '&lt;/svg>'
+        // 传递 icons 参数，控制图标样式
+        const $iconHome = createElement(svg, {
+          size: 24, // [24, 26]
+          color: '#f00',
+          iconSet: 'rdc',
+          // 设置图标的 HTML 属性，只要是 DOM.setAttribute 支持的 HTML 都可以
+          attrs: {
+            // 添加交互或者计算需要的 data 属性值
+            'data-icon': 'custom-icon',
+            // 创建的 svg DOM 元素的完整className = 'ijs-icon custom-icon'
+            // 会自动添加上 icons.js 自带的 ijs-icon 默认的 className
+            className: 'custom-icon'
+          }
+        })
+        $home.appendChild($iconHome)
