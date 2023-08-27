@@ -129,7 +129,7 @@ const minifyApiStyle = () => {
     .pipe(gulp.dest('./docs'))
 }
 
-const buildDocStyle = gulp.series(buildApiStyle, minifyApiStyle)
+const buildDocStyle = gulp.series(cleanStyle, buildApiStyle, minifyApiStyle)
 
 const buildApiScript = () => {
   return run('npm run build:api:script').exec()
