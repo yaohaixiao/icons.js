@@ -1,3 +1,12 @@
+# [1.8.0](https://github.com/yaohaixiao/icons.js/compare/1.7.0...1.8.0) (2023-08-27)
+
+
+### Features
+
+* 调整 assets 资源文件的结构；更新 API 文档，添加内置图标展示； ([f5d559f](https://github.com/yaohaixiao/icons.js/commit/f5d559f4a1e07cf8cf7816bd66a433e985b3cadb))
+
+
+
 # [1.7.0](https://github.com/yaohaixiao/icons.js/compare/1.6.0...1.7.0) (2023-08-26)
 
 
