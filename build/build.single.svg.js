@@ -10,11 +10,11 @@ icons.forEach((symbol) => {
   const sizes = patternSize.exec(symbol)[1].split(' ')
   const originWidth = parseInt(sizes[0], 10)
   const originHeight = parseInt(sizes[1], 10)
-  const width = originWidth > 200 ? 200 : originWidth
-  const height = originHeight > 200 ? 200 : originHeight
+  const width = 200
+  const height = 200
   const fileName = `${name}.svg`
-  const content =
-    '<svg xmlns="http://www.w3.org/2000/svg" width="' +
+  const icon =
+    '<svg xmlns="http://www.w3.org/2000/svg" class="ijs-icon__svg" width="' +
     width +
     '" height="' +
     height +
@@ -26,7 +26,7 @@ icons.forEach((symbol) => {
     paths +
     '</svg>'
 
-  fs.writeFile(`assets/${fileName}`, content, (err) => {
+  fs.writeFile(`assets/svg/${fileName}`, icon, (err) => {
     if (err) {
       console.error(err)
     }

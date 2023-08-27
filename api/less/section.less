@@ -78,4 +78,36 @@
     background-color: @bg_color;
     color: @fourth_text_color;
   }
+
+  &-svg {
+    text-align: center;
+    padding-top: 30px;
+    color: @third_text_color;
+
+    .ijs-icon__svg {
+      width: 36px;
+      height: 36px;
+      transition-duration: 0.3s;
+    }
+
+    &__name {
+      line-height: 24px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: @hover_bg_color;
+      color: @success_color;
+
+      .ijs-icon__svg {
+        transform: scale(160%);
+      }
+    }
+  }
+
+  &_grids {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 20px;
+  }
 }

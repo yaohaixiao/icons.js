@@ -198,6 +198,7 @@ const watchAll = gulp.parallel(watchSource, watchApi, watchDocs)
 module.exports.start = start
 module.exports.clean = cleanDocs
 module.exports.buildLibStyle = buildLibStyle
+module.exports.buildApiPug = buildApiPug
 module.exports.buildDocStyle = buildDocStyle
 module.exports.buildApiScript = buildApiScript
 module.exports.build = build
