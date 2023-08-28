@@ -3,7 +3,7 @@
     ? (module.exports = l())
     : 'function' == typeof define && define.amd
     ? define(l)
-    : ((a = 'undefined' != typeof globalThis ? globalThis : a || self).icons =
+    : ((a = 'undefined' != typeof globalThis ? globalThis : a || self).SYMBOLS =
         l())
 })(this, function () {
   'use strict'

@@ -1,4 +1,4 @@
-import getSymbols from './getSymbols'
+import SYMBOLS from './symbols'
 
 /**
  * 获取图标集图标数量
@@ -7,7 +7,7 @@ import getSymbols from './getSymbols'
  * @return {number}
  */
 const count = () => {
-  return getSymbols().length
+  return SYMBOLS.length
 }
 
 export default count

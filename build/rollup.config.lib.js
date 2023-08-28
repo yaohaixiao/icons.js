@@ -35,7 +35,7 @@ export default [
   {
     input: './assets/icons.js',
     output: {
-      name: 'icons',
+      name: 'SYMBOLS',
       file: './assets/icons.umd.js',
       format: 'umd',
       sourcemap: true

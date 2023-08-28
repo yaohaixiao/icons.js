@@ -1,7 +1,7 @@
 import isArray from './utils/isArray'
 import isString from './utils/isString'
+
 import SYMBOLS from './symbols'
-import APPENDS from './appends'
 
 /**
  * 向图标集中添加单个或者 symbol
@@ -19,14 +19,12 @@ const add = (symbols) => {
     symbols.forEach((symbol) => {
       /* istanbul ignore else */
       if (SYMBOLS.indexOf(symbol) === -1 && isString(symbol)) {
-        APPENDS.push(symbol)
         SYMBOLS.push(symbol)
       }
     })
   } else {
     /* istanbul ignore else */
     if (isString(symbols)) {
-      APPENDS.push(symbols)
       SYMBOLS.push(symbols)
     }
   }

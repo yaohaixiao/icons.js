@@ -1,6 +1,5 @@
 import isString from './utils/isString'
 import getSymbol from './getSymbol'
-import getSymbols from './getSymbols'
 import SYMBOLS from './symbols'
 
 /**
@@ -13,7 +12,6 @@ import SYMBOLS from './symbols'
  */
 const remove = (name, iconSet = 'icon') => {
   const $icons = document.querySelector('#ijs-icons')
-  const symbols = getSymbols()
   const target = getSymbol(name, iconSet)
   let index = -1
   let $symbol
@@ -23,7 +21,7 @@ const remove = (name, iconSet = 'icon') => {
     return false
   }
 
-  index = symbols.indexOf(target)
+  index = SYMBOLS.indexOf(target)
 
   /* istanbul ignore else */
   if (index > -1) {

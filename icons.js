@@ -2,11 +2,11 @@ import paint from './paint'
 import createElement from './createElement'
 import icon from './icon'
 import appendTo from './appendTo'
-import getSymbols from './getSymbols'
-import count from './count'
 import add from './add'
 import remove from './remove'
 import clear from './clear'
+import getSymbols from './getSymbols'
+import count from './count'
 
 const icons = {
   paint(symbols = []) {
@@ -27,14 +27,6 @@ const icons = {
     return this
   },
 
-  symbols(name, iconSet = 'icon') {
-    return getSymbols(name, iconSet)
-  },
-
-  count() {
-    return count()
-  },
-
   add(symbol) {
     add(symbol)
     return this
@@ -48,6 +40,14 @@ const icons = {
   clear() {
     clear()
     return this
+  },
+
+  symbols(name, iconSet = 'icon') {
+    return getSymbols(name, iconSet)
+  },
+
+  count() {
+    return count()
   }
 }
 
