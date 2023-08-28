@@ -1,3 +1,12 @@
+# [2.0.0](https://github.com/yaohaixiao/icons.js/compare/1.8.0...2.0.0) (2023-08-28)
+
+
+### Features
+
+* 调整代码逻辑，2.0.0 版本开始默认图标为空，需要手动导入 assets/icons.js 中的图标绘制 ([2186036](https://github.com/yaohaixiao/icons.js/commit/21860365f48c18c4edbb12a17d66213338696d85))
+
+
+
 # [1.8.0](https://github.com/yaohaixiao/icons.js/compare/1.7.0...1.8.0) (2023-08-27)
 
 
