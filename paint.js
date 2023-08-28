@@ -15,6 +15,10 @@ const paint = (symbol = '') => {
   add(symbol)
   symbols = getSymbols()
 
+  if (symbols.length < 1) {
+    return false
+  }
+
   if ($icons) {
     $icons.innerHTML = symbols.join('')
   } else {

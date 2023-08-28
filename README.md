@@ -71,7 +71,7 @@ npm i @yaohaixiao/icons.js
 [icons.js 的默认图标集](https://yaohaixiao.github.io/icons.toolkit.vue/#/default) 仅提供了 60 个常用 svg 图标：
 
 ```js
-const Icons = [
+const SYMBOLS = [
   '<symbol id="icon-up" viewBox="0 0 1024 1024"><path d="M494.784 261.696c0.832-0.448 1.536-1.216 2.368-1.536a38.72 38.72 0 0 1 46.08 8.256l277.824 302.272a41.92 41.92 0 0 1-1.536 58.048 39.104 39.104 0 0 1-56.448-1.6L513.728 355.904 260.736 626.048a39.104 39.104 0 0 1-56.448 1.088 41.6 41.6 0 0 1-1.088-57.984L483.84 269.696c0.512-0.512 1.344-0.768 1.92-1.408l1.088-1.344c2.368-2.496 5.312-3.648 8-5.248z"></path></symbol>',
   '<symbol id="icon-down" viewBox="0 0 1024 1024"><path d="M494.784 762.304c0.832 0.448 1.536 1.216 2.368 1.536 15.232 7.488 33.92 4.992 46.08-8.256l277.824-302.272a41.92 41.92 0 0 0-1.536-58.048 39.104 39.104 0 0 0-56.448 1.6l-249.344 271.232-252.992-270.144a39.104 39.104 0 0 0-56.448-1.088 41.6 41.6 0 0 0-1.088 57.984l280.576 299.456c0.512 0.512 1.344 0.768 1.92 1.408l1.088 1.344c2.368 2.496 5.312 3.648 8 5.248z"></path></symbol>',
   '<symbol id="icon-menu" viewBox="0 0 1024 1024"><path d="M320 256h640V128H320zM320 576h640V448H320zM320 896h640v-128H320zM64 256h128V128H64zM64 576h128V448H64zM64 896h128v-128H64z"></path></symbol>',
@@ -82,7 +82,7 @@ const Icons = [
   '<symbol id="icon-more" viewBox="0 0 26 28"><path d="M25.5 15c0 0.547-0.453 1-1 1h-3.5c0 1.953-0.422 3.422-1.047 4.531l3.25 3.266c0.391 0.391 0.391 1.016 0 1.406-0.187 0.203-0.453 0.297-0.703 0.297s-0.516-0.094-0.703-0.297l-3.094-3.078s-2.047 1.875-4.703 1.875v-14h-2v14c-2.828 0-4.891-2.063-4.891-2.063l-2.859 3.234c-0.203 0.219-0.469 0.328-0.75 0.328-0.234 0-0.469-0.078-0.672-0.25-0.406-0.375-0.438-1-0.078-1.422l3.156-3.547c-0.547-1.078-0.906-2.469-0.906-4.281h-3.5c-0.547 0-1-0.453-1-1s0.453-1 1-1h3.5v-4.594l-2.703-2.703c-0.391-0.391-0.391-1.016 0-1.406s1.016-0.391 1.406 0l2.703 2.703h13.188l2.703-2.703c0.391-0.391 1.016-0.391 1.406 0s0.391 1.016 0 1.406l-2.703 2.703v4.594h3.5c0.547 0 1 0.453 1 1zM18 6h-10c0-2.766 2.234-5 5-5s5 2.234 5 5z"></path></symbol>'
 ]
 
-export default Icons
+export default SYMBOLS
 ```
 
 其中 symbol 中的 id 字符名称，例如 icon-up：
@@ -99,7 +99,11 @@ export default Icons
 除了上述示例中的 ES6 模块的资源文件，icons.js 还提供了 UMD 模块的 symbols:
 
 ```js
-const icons = require('@yaohaixiao/icons.js/assets/icons')
+// ES6 模块
+import SYMBOLS from '@yaohaixiao/icons.js/assets/icons'
+
+// UMD 模块
+const SYMBOLS = require('@yaohaixiao/icons.js/assets/icons.umd')
 ```
 
 另外还提供了独立的 .svg 文件和包含所有图标的 svg sprites 图标集：@yaohaixiao/icons.js/assets/icons.svg
@@ -140,10 +144,12 @@ Default: ``
 ###### 绘制默认图标集
 
 ```js
+// 说明：2.0.0 版本开始，icons.js 不会内置默认图标
+import SYMBOLS from '@yaohaixiao/icons.js/assets/icons'
 import icons from '@yaohaixiao/icons.js/icons'
 
-// 不添加参数，绘制默认图标
-icons.paint()
+// 需要手动调用 SYMBOLS 绘制默认图标，初始化图标集
+icons.paint(SYMBOLS)
 ```
 
 ###### 追加绘制单个新图标
@@ -155,9 +161,6 @@ import paint from '@yaohaixiao/icons.js/paint'
 
 const NPM =
   '<symbol id="rdc-icon-npm" viewBox="0 0 2500 2500"><path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff"/></symbol>'
-
-// 绘制默认图标
-icons.paint()
 
 // 参数为 string 类型，追加单个图标
 // 追加绘制 NPM 图标
@@ -175,9 +178,6 @@ const ICONS = [
   '<symbol id="rdc-icon-unlink" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1344 14.6172C11.5191 15.0019 12.1428 15.0019 12.5275 14.6172C12.9122 14.2325 12.9122 13.6088 12.5275 13.2241L2.77592 3.47247C2.39123 3.08778 1.76753 3.08778 1.38284 3.47247C0.998145 3.85716 0.998145 4.48086 1.38284 4.86555L2.07938 5.5621L1.73111 5.91037C-0.577036 8.21851 -0.577036 11.9608 1.73111 14.2689C4.03925 16.577 7.78149 16.577 10.0896 14.2689L10.4379 13.9206L11.1344 14.6172ZM9.04482 12.5275L3.47247 6.95518L3.12419 7.30346C1.58543 8.84222 1.58543 11.337 3.12419 12.8758C4.66296 14.4146 7.15778 14.4146 8.69654 12.8758L9.04482 12.5275Z" /><path d="M5.21383 2.42765C4.82913 2.81234 4.82914 3.43605 5.21383 3.82074C5.59852 4.20543 6.22222 4.20543 6.60691 3.82074L7.30346 3.12419C8.84222 1.58543 11.337 1.58543 12.8758 3.12419C14.4146 4.66296 14.4146 7.15778 12.8758 8.69654L12.1793 9.39309C11.7946 9.77778 11.7946 10.4015 12.1793 10.7862C12.564 11.1709 13.1877 11.1709 13.5724 10.7862L14.2689 10.0896C16.577 7.78149 16.577 4.03925 14.2689 1.73111C11.9608 -0.577036 8.21851 -0.577036 5.91037 1.73111L5.21383 2.42765Z" /></symbol>',
   '<symbol id="rdc-icon-npm" viewBox="0 0 2500 2500"><path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff"/></symbol>'
 ]
-
-// 绘制默认图标
-icons.paint()
 
 // 参数为 array 类型，追加多个图标
 // 追加绘制 NPM 图标
@@ -240,6 +240,7 @@ Type: `HTMLElement`
 ```
 
 ```js
+import SYMBOLS from '@yaohaixiao/icons.js/assets/icons'
 import icons from '@yaohaixiao/icons.js/icons'
 // 或者引入独立方法
 import createElement from '@yaohaixiao/icons.js/createElement'
@@ -248,7 +249,7 @@ const $up = document.querySelector('#up')
 const $down = document.querySelector('#down')
 const $home = document.querySelector('#home')
 
-icons.paint()
+icons.paint(SYMBOLS)
 
 // 使用 icon() 方法创建一个包含显示 up 图标的 i 标签:
 const $iconUp = icons.createElement('up')
@@ -333,11 +334,12 @@ Default: `{}`
 ```
 
 ```js
+import SYMBOLS from '@yaohaixiao/icons.js/assets/icons'
 import icons from '@yaohaixiao/icons.js/icons'
 // 或者引入独立方法
 import appendTo from '@yaohaixiao/icons.js/appendTo'
 
-icons.paint()
+icons.paint(SYMBOLS)
 
 icons.appendTo('#up', 'up')
 appendTo('#down', 'down', {
@@ -392,9 +394,7 @@ const ICONS = [
 icons.add(ICONS)
 
 // 获取全部
-icons.symbols()
-// 获取单个（只能获取默认图标集中的数据）
-symbols('up')
+icons.symbols() // -> ICONS 中的 2 个图标（说明：2.0.0 开始，不会将 60 个默认图标默认绘制）
 // 获取单个，指定图标集
 symbols('unlink', 'rdc')
 ```
@@ -472,8 +472,6 @@ const ICONS = [
 // 追加绘制 NPM 图标
 icons.paint(ICONS)
 
-// 移除 up 图标
-icons.remove('up')
 // 移除 tips 图标
 remove('tips', 'rdc')
 ```
@@ -500,10 +498,6 @@ const ICONS = [
 icons.paint(ICONS)
 // 将移除图标集元素
 icons.clear()
-
-// 再次绘制图标集元素，之前追加的2个图标已经清除
-icons.paint()
-clear()
 ```
 
 
@@ -515,13 +509,14 @@ Icon.vue 是基于 VUE 2.6 的一个独立组件，用于在 VUE 项目中显示
 #### import vue component
 
 ```js
+import SYMBOLS from '@yaohaixiao/icons.js/assets/icons'
 // 引入 components 组件
 import Icon from '@yaohaixiao/icons.js/components/Icon'
 
 // 在使用组件前，需要先调用 paint() 方法将 svg 图标集绘制到文档中
 import paint from '@yaohaixiao/icons.js/paint'
 
-paint()
+paint(SYMBOLS)
 ```
 
 #### Usage
@@ -606,6 +601,7 @@ icon() 方法的调用与 Icon.vue 组件类似，调用语法如下：
 ```
 
 ```js
+import SYMBOLS from '@yaohaixiao/icons.js/assets/icons'
 // 引入 icon() 方法
 import icon from '@yaohaixiao/icons.js/components.vue'
 // 在使用组件前，需要先调用 paint() 方法将 svg 图标集绘制到文档中
@@ -615,6 +611,8 @@ const NPM =
   '<symbol id="rdc-icon-npm" viewBox="0 0 2500 2500"><path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff"/></symbol>'
 const $up = document.querySelector('#up')
 const $tips = document.querySelector('#tips')
+
+paint(SYMBOLS)
 
 paint(NPM)
 

@@ -11,9 +11,8 @@ import SYMBOLS from './symbols'
 const getSymbol = (name, iconSet = 'icon') => {
   const patternName = /id="(.*?)"/
   const patternSet = /^(\w+)-/
-  const symbols = SYMBOLS
 
-  return symbols.find((symbol) => {
+  return SYMBOLS.find((symbol) => {
     const names = patternName.exec(symbol)
     const fullName = names[1]
     const sets = patternSet.exec(fullName)

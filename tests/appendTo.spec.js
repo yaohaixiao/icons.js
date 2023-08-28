@@ -1,6 +1,7 @@
 /**
  * @jest-environment jsdom
  */
+import ICONS from '@/assets/icons'
 import appendTo from '@/appendTo'
 import paint from '@/paint'
 import clear from '@/clear'
@@ -24,7 +25,7 @@ describe('remove() 方法：', () => {
 
   beforeEach(() => {
     clear()
-    paint()
+    paint(ICONS)
   })
 
   it(`不传参数：appendTo()，返回：false`, () => {
