@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/yaohaixiao/icons.js/compare/2.0.0...2.1.0) (2023-09-04)
+
+
+### Features
+
+* 调整 createElement() 方法 ([5c5e2a0](https://github.com/yaohaixiao/icons.js/commit/5c5e2a0aa34bf905a376bacb5b09cf32c5b99ccd))
+
+
+
 # [2.0.0](https://github.com/yaohaixiao/icons.js/compare/1.8.0...2.0.0) (2023-08-28)
 
 
