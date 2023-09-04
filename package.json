@@ -1,6 +1,6 @@
 {
   "name": "@yaohaixiao/icons.js",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "icons.js - 专门用来显示 SVG 图标的 JavaScript 小工具。",
   "main": "icons.min.js",
   "files": [

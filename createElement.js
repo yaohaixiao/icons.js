@@ -25,6 +25,7 @@ const createElement = (name, options = {}) => {
   const height = isArraySize ? size[1] : size
   const defaultRules = size ? `width:${width}px;height:${height}px;` : ''
   const cssRules = color ? defaultRules + `color:${color}` : defaultRules
+  const attrs = options.attrs || {}
   const $icon = document.createElement('i')
   let binds = ''
   let svg = ''
@@ -46,11 +47,13 @@ const createElement = (name, options = {}) => {
 
   $icon.innerHTML = svg
 
-  if (options.className) {
-    $icon.className = `${ICON} ${options.className}`
+  if (attrs.className) {
+    attrs.className = `${ICON} ${attrs.className}`
   } else {
-    $icon.className = `${ICON}`
+    attrs.className = `${ICON}`
   }
+
+  setAttributes($icon, attrs)
 
   $svg = $icon.querySelector('svg')
   setAttributes($svg, {
