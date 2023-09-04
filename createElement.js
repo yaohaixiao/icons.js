@@ -1,7 +1,6 @@
 import isArray from './utils/isArray'
 import isString from './utils/isString'
 import isSVG from './utils/isSVG'
-import _createElement from './utils/createElement'
 import setAttributes from './utils/setAttributes'
 
 /**
@@ -26,10 +25,9 @@ const createElement = (name, options = {}) => {
   const height = isArraySize ? size[1] : size
   const defaultRules = size ? `width:${width}px;height:${height}px;` : ''
   const cssRules = color ? defaultRules + `color:${color}` : defaultRules
-  const attrs = options.attrs || {}
+  const $icon = document.createElement('i')
   let binds = ''
   let svg = ''
-  let $icon
   let $svg
 
   if (!isString(name)) {
@@ -46,15 +44,13 @@ const createElement = (name, options = {}) => {
     svg = `<svg><use ${binds}></use></svg>`
   }
 
-  attrs.innerHTML = svg
+  $icon.innerHTML = svg
 
-  if (attrs.className) {
-    attrs.className = `${ICON} ${attrs.className}`
+  if (options.className) {
+    $icon.className = `${ICON} ${options.className}`
   } else {
-    attrs.className = `${ICON}`
+    $icon.className = `${ICON}`
   }
-
-  $icon = _createElement('i', attrs)
 
   $svg = $icon.querySelector('svg')
   setAttributes($svg, {
