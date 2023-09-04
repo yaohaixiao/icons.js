@@ -1,6 +1,7 @@
 import isArray from './utils/isArray'
 import isString from './utils/isString'
 import isSVG from './utils/isSVG'
+import _createElement from './utils/createElement'
 import setAttributes from './utils/setAttributes'
 
 /**
@@ -16,17 +17,19 @@ import setAttributes from './utils/setAttributes'
  * @returns {HTMLElement}
  */
 const createElement = (name, options = {}) => {
+  const ICON = 'ijs-icon'
   const size = options.size || 0
+  const isArraySize = isArray(size)
   const color = options.color || ''
   const iconSet = options.iconSet || ''
-  const width = isArray(size) ? size[0] : size
-  const height = isArray(size) ? size[1] : size
+  const width = isArraySize ? size[0] : size
+  const height = isArraySize ? size[1] : size
   const defaultRules = size ? `width:${width}px;height:${height}px;` : ''
   const cssRules = color ? defaultRules + `color:${color}` : defaultRules
-  const $icon = document.createElement('i')
   const attrs = options.attrs || {}
   let binds = ''
   let svg = ''
+  let $icon
   let $svg
 
   if (!isString(name)) {
@@ -40,32 +43,28 @@ const createElement = (name, options = {}) => {
       iconSet && iconSet !== 'icon'
         ? `xlink:href="#${iconSet}-icon-${name}"`
         : `xlink:href="#icon-${name}"`
-    svg =
-      `<svg aria-hidden="true" class="ijs-icon__svg" style="${cssRules}">` +
-      `<use ${binds}></use>` +
-      `</svg>`
+    svg = `<svg><use ${binds}></use></svg>`
   }
+
+  attrs.innerHTML = svg
 
   if (attrs.className) {
-    attrs.className = 'ijs-icon ' + attrs.className
+    attrs.className = `${ICON} ${attrs.className}`
   } else {
-    attrs.className = 'ijs-icon'
+    attrs.className = `${ICON}`
   }
 
-  setAttributes($icon, attrs)
-  $icon.innerHTML = svg
+  $icon = _createElement('i', attrs)
 
-  if (isSVG(name)) {
-    $svg = $icon.querySelector('svg')
-    setAttributes($svg, {
-      'aria-hidden': true,
-      xmlns: 'http://www.w3.org/2000/svg',
-      class: 'ijs-icon__svg',
-      width: 200,
-      height: 200,
-      style: cssRules
-    })
-  }
+  $svg = $icon.querySelector('svg')
+  setAttributes($svg, {
+    'aria-hidden': true,
+    xmlns: 'http://www.w3.org/2000/svg',
+    class: 'ijs-icon__svg',
+    width: 200,
+    height: 200,
+    style: cssRules
+  })
 
   return $icon
 }
