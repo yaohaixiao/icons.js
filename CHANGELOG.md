@@ -1,3 +1,12 @@
+# [2.2.0](https://github.com/yaohaixiao/icons.js/compare/2.1.0...2.2.0) (2023-09-04)
+
+
+### Features
+
+* 调整 createElement() 方法，options 参数添加 attrs 属性，用以设置创建 DOM 元素的 HTML 标签，以更好的控制创建图标元素的样式； ([0899fdc](https://github.com/yaohaixiao/icons.js/commit/0899fdc6ec1eec4a945f283a063b87eba83f6123))
+
+
+
 # [2.1.0](https://github.com/yaohaixiao/icons.js/compare/2.0.0...2.1.0) (2023-09-04)
 
 
