@@ -1,3 +1,12 @@
+# [2.3.0](https://github.com/yaohaixiao/icons.js/compare/2.2.0...2.3.0) (2023-09-22)
+
+
+### Features
+
+* 添加 getSymbol()、getSymbolName()、getSymbolPath() 和 getSymbolSize() 方法，并更新 API 文档； ([991edeb](https://github.com/yaohaixiao/icons.js/commit/991edeb9b0e9624602c7ee73730442aea5a38c4e))
+
+
+
 # [2.2.0](https://github.com/yaohaixiao/icons.js/compare/2.1.0...2.2.0) (2023-09-04)
 
 
