@@ -1,4 +1,4 @@
-import Outline from '@yaohaixiao/outline.js/src/outline'
+import Outline from '@yaohaixiao/outline.js/outline'
 
 const defaults = Outline.DEFAULTS
 let outline
@@ -18,3 +18,5 @@ defaults.chapterTextFilter = (text) => {
 }
 
 outline = new Outline(Outline.DEFAULTS)
+
+export default outline

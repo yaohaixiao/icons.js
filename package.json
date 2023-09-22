@@ -1,6 +1,6 @@
 {
   "name": "@yaohaixiao/icons.js",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "icons.js - 专门用来显示 SVG 图标的 JavaScript 小工具。",
   "main": "icons.min.js",
   "files": [
@@ -13,6 +13,9 @@
     "count.js",
     "createElement.js",
     "getSymbol.js",
+    "getSymbolName.js",
+    "getSymbolPath.js",
+    "getSymbolSize.js",
     "getSymbols.js",
     "icon.css",
     "icon.min.css",
@@ -67,7 +70,7 @@
     "@rollup/plugin-commonjs": "^25.0.3",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
-    "@yaohaixiao/outline.js": "^3.20.0",
+    "@yaohaixiao/outline.js": "^3.29.0",
     "babel-jest": "^29.5.0",
     "commitlint": "^17.4.4",
     "conventional-changelog-cli": "^2.2.2",

@@ -5,6 +5,9 @@ import appendTo from './appendTo'
 import add from './add'
 import remove from './remove'
 import clear from './clear'
+import getSymbolPath from './getSymbolPath'
+import getSymbolSize from './getSymbolSize'
+import getSymbolName from './getSymbolName'
 import getSymbols from './getSymbols'
 import count from './count'
 
@@ -40,6 +43,22 @@ const icons = {
   clear() {
     clear()
     return this
+  },
+
+  getSymbol(name, iconSet = 'icon') {
+    return getSymbols(name, iconSet)
+  },
+
+  getSymbolName(symbol, isFull = false) {
+    return getSymbolName(symbol, isFull)
+  },
+
+  getSymbolPath(name, iconSet = 'icon') {
+    return getSymbolPath(name, iconSet)
+  },
+
+  getSymbolSize(name, iconSet = 'icon') {
+    return getSymbolSize(name, iconSet)
   },
 
   symbols(name, iconSet = 'icon') {

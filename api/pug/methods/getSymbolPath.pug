@@ -1,0 +1,44 @@
+section.section
+  header.section__header
+    h3.section__h3 getSymbolPath(name[, iconSet='icon'])
+  div.section__content
+    h4.section__h4 Description
+    p getSymbolPath() 方法用于内置的图标 symbol 字符串中的 path 信息，或者获取自定义 symbol 图标字符串中的 path 信息。
+    h4.section__h4 Parameters
+    h5.section__h4 symbol
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd String
+    p （必须）name 名称或者 symbol 图标字符串。
+    h5.section__h4 iconSet
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd String
+    dl.section__dl
+      dt.section__dt Default：
+      dd.section__dd 'icon'
+    p （可选）指定图标集名称。
+    h4.section__h4 Returns
+    dl.section__dl
+      dt.section__dt Type：
+      dd.section__dd String
+    p symbol 图标字符串中的 path 信息。
+    pre.section__pre
+      code.section__code.
+        import ICONS from '@/assets/icons'
+        import icons from '@yaohaixiao/icons.js/icons'
+        // 或者引入独立方法
+        import getSymbolPath from '@yaohaixiao/icons.js/getSymbolPath'
+
+        icons.paint(ICONS)
+
+        const ICONS = [
+          '&lt;symbol id="icon-unlink" viewBox="0 0 16 16">&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M11.1344 14.6172C11.5191 15.0019 12.1428 15.0019 12.5275 14.6172C12.9122 14.2325 12.9122 13.6088 12.5275 13.2241L2.77592 3.47247C2.39123 3.08778 1.76753 3.08778 1.38284 3.47247C0.998145 3.85716 0.998145 4.48086 1.38284 4.86555L2.07938 5.5621L1.73111 5.91037C-0.577036 8.21851 -0.577036 11.9608 1.73111 14.2689C4.03925 16.577 7.78149 16.577 10.0896 14.2689L10.4379 13.9206L11.1344 14.6172ZM9.04482 12.5275L3.47247 6.95518L3.12419 7.30346C1.58543 8.84222 1.58543 11.337 3.12419 12.8758C4.66296 14.4146 7.15778 14.4146 8.69654 12.8758L9.04482 12.5275Z" /><path d="M5.21383 2.42765C4.82913 2.81234 4.82914 3.43605 5.21383 3.82074C5.59852 4.20543 6.22222 4.20543 6.60691 3.82074L7.30346 3.12419C8.84222 1.58543 11.337 1.58543 12.8758 3.12419C14.4146 4.66296 14.4146 7.15778 12.8758 8.69654L12.1793 9.39309C11.7946 9.77778 11.7946 10.4015 12.1793 10.7862C12.564 11.1709 13.1877 11.1709 13.5724 10.7862L14.2689 10.0896C16.577 7.78149 16.577 4.03925 14.2689 1.73111C11.9608 -0.577036 8.21851 -0.577036 5.91037 1.73111L5.21383 2.42765Z">&lt;/path>&lt;/symbol>',
+          '&lt;symbol id="rdc-icon-npm" viewBox="0 0 2500 2500">&lt;path d="M0 0h2500v2500H0z" fill="#c00"/><path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff">&lt;/path>&lt;/symbol>'
+        ]
+
+        icons.getSymbolPath('up')
+        // -> '&lt;path d="M494.784 261.696c0.832-0.448 1.536-1.216 2.368-1.536a38.72 38.72 0 0 1 46.08 8.256l277.824 302.272a41.92 41.92 0 0 1-1.536 58.048 39.104 39.104 0 0 1-56.448-1.6L513.728 355.904 260.736 626.048a39.104 39.104 0 0 1-56.448 1.088 41.6 41.6 0 0 1-1.088-57.984L483.84 269.696c0.512-0.512 1.344-0.768 1.92-1.408l1.088-1.344c2.368-2.496 5.312-3.648 8-5.248z"&gt;&lt;/path&gt;'
+
+        getSymbolPath(ICONS[1])
+        // -> '&lt;path d="M0 0h2500v2500H0z" fill="#c00"/&gt;&lt;path d="M1241.5 268.5h-973v1962.9h972.9V763.5h495v1467.9h495V268.5z" fill="#fff"&gt;&lt;/path>'

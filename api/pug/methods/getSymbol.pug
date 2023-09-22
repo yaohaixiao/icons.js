@@ -1,18 +1,18 @@
 section.section
   header.section__header
-    h3.section__h3 symbols([name, iconSet='icon'])
+    h3.section__h3 getSymbol(name[, iconSet='icon'])
   div.section__content
     h4.section__h4 Description
-    p symbols() 方法用于获取先现有图标集中单个或者全部 svg 图标 symbol 数据。
+    p getSymbol() 方法用于获取先现有图标集中单个 symbol 数据。
     h4.section__h4 Parameters
     h5.section__h4 name
     dl.section__dl
       dt.section__dt Type：
-      dd.section__dd String|Array
+      dd.section__dd String
     dl.section__dl
       dt.section__dt Default：
       dd.section__dd ''
-    p （可选）当前图标集中的图标名或者多个图标名（数组）。
+    p （可选）当前图标集中的图标名。
     h5.section__h4 icons
     dl.section__dl
       dt.section__dt Type：
@@ -30,7 +30,7 @@ section.section
       code.section__code.
         import icons from '@yaohaixiao/icons.js/icons'
         // 或者引入独立方法
-        import symbols from '@yaohaixiao/icons.js/symbols'
+        import getSymbol from '@yaohaixiao/icons.js/getSymbol'
 
         const ICONS = [
           '&lt;symbol id="rdc-icon-unlink" viewBox="0 0 16 16">&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M11.1344 14.6172C11.5191 15.0019 12.1428 15.0019 12.5275 14.6172C12.9122 14.2325 12.9122 13.6088 12.5275 13.2241L2.77592 3.47247C2.39123 3.08778 1.76753 3.08778 1.38284 3.47247C0.998145 3.85716 0.998145 4.48086 1.38284 4.86555L2.07938 5.5621L1.73111 5.91037C-0.577036 8.21851 -0.577036 11.9608 1.73111 14.2689C4.03925 16.577 7.78149 16.577 10.0896 14.2689L10.4379 13.9206L11.1344 14.6172ZM9.04482 12.5275L3.47247 6.95518L3.12419 7.30346C1.58543 8.84222 1.58543 11.337 3.12419 12.8758C4.66296 14.4146 7.15778 14.4146 8.69654 12.8758L9.04482 12.5275Z" /><path d="M5.21383 2.42765C4.82913 2.81234 4.82914 3.43605 5.21383 3.82074C5.59852 4.20543 6.22222 4.20543 6.60691 3.82074L7.30346 3.12419C8.84222 1.58543 11.337 1.58543 12.8758 3.12419C14.4146 4.66296 14.4146 7.15778 12.8758 8.69654L12.1793 9.39309C11.7946 9.77778 11.7946 10.4015 12.1793 10.7862C12.564 11.1709 13.1877 11.1709 13.5724 10.7862L14.2689 10.0896C16.577 7.78149 16.577 4.03925 14.2689 1.73111C11.9608 -0.577036 8.21851 -0.577036 5.91037 1.73111L5.21383 2.42765Z">&lt;/path>&lt;/symbol>',
@@ -41,9 +41,6 @@ section.section
         // 追加绘制 NPM 图标
         icons.add(ICONS)
 
-        // 获取全部
-        icons.symbols()
-        // 获取单个（只能获取默认图标集中的数据）
-        symbols('up')
-        // 获取单个，指定图标集
+        icons.getSymbol('up')
+        symbols('npm', 'rdc')
         symbols('unlink', 'rdc')
