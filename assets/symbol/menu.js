@@ -1,0 +1,3 @@
+const MENU =
+  '<symbol id="icon-menu" viewBox="0 0 1024 1024"><path d="M320 256h640V128H320zM320 576h640V448H320zM320 896h640v-128H320zM64 256h128V128H64zM64 576h128V448H64zM64 896h128v-128H64z"></path></symbol>'
+export default MENU
