@@ -1,3 +1,12 @@
+# [2.4.0](https://github.com/yaohaixiao/icons.js/compare/2.3.0...2.4.0) (2023-10-14)
+
+
+### Features
+
+* 将 icons.js 中的各个 symbol 拆分为独立的 symbol 脚本（/assets/symbol） ([4bed255](https://github.com/yaohaixiao/icons.js/commit/4bed255aa740e4687f69307df27611df6cb613bf))
+
+
+
 # [2.3.0](https://github.com/yaohaixiao/icons.js/compare/2.2.0...2.3.0) (2023-09-22)
 
 
